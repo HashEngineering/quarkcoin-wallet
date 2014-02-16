@@ -27,7 +27,7 @@ import com.google.bitcoin.core.NetworkParameters;
 import com.google.bitcoin.params.MainNetParams;
 import com.google.bitcoin.params.TestNet3Params;
 import com.google.bitcoin.core.CoinDefinition;
-import de.schildbach.wallet.digitalcoin.R;
+import hashengineering.quarkcoin.wallet.R;
 
 
 
@@ -85,9 +85,9 @@ public class Constants
 	public static final int ADDRESS_FORMAT_GROUP_SIZE = 4;
 	public static final int ADDRESS_FORMAT_LINE_SIZE = 12;
 
-	public static final int BTC_MAX_PRECISION = 8;
-	public static final int MBTC_MAX_PRECISION = 5;
-	public static final int LOCAL_PRECISION = 4;
+	public static final int BTC_MAX_PRECISION = 5;      //For Quark, Maximum of 5 decimal places for QRK
+	public static final int MBTC_MAX_PRECISION = 2;     //For Quark, maximum of 2 decimal places for mQRK
+	public static final int LOCAL_PRECISION = 4;        //For Quark
 
 	public static final String DONATION_ADDRESS = CoinDefinition.DONATION_ADDRESS;
 	public static final String REPORT_EMAIL = "hashengineeringsolutions@gmail.com";
@@ -98,12 +98,12 @@ public class Constants
 	public static final String LICENSE_URL = "http://www.gnu.org/licenses/gpl-3.0.txt";
     public static final String FORKED_FROM_SOURCE = "based on bitcoin-wallet 3.31\n";
     public static final String FORKED_FROM_SOURCE_BITCOINJ = "based on bitcoinj 0.12\n";
-	public static final String SOURCE_URL = "https://github.com/HashEngineering/" + CoinDefinition.coinName.toLowerCase() + "-wallet";
+	public static final String SOURCE_URL = "https://github.com/HashEngineering/" + CoinDefinition.coinInternalName.toLowerCase() + "-wallet";
 	public static final String BINARY_URL = "http://code.google.com/p/bitcoin-wallet/downloads/list";
-	public static final String CREDITS_BITCOINJ_URL = "https://github.com/HashEngineering/" + CoinDefinition.coinName.toLowerCase() + "j";
+	public static final String CREDITS_BITCOINJ_URL = "https://github.com/HashEngineering/" + CoinDefinition.coinInternalName.toLowerCase() + "j";
 	public static final String CREDITS_ZXING_URL = "http://code.google.com/p/zxing/";
-    public static final String CREDITS_WEBSITE_URL = "http://digitalcoin.co/";
-    public static final String CREDITS_FORUM_URL = "http://digitalcoin.co/forums/";
+    public static final String CREDITS_WEBSITE_URL = "http://www.qrk.cc/";
+    public static final String CREDITS_FORUM_URL = "http://forum.qrk.cc/";
 	public static final String CREDITS_ICON_URL = "https://bitcointalk.org/index.php?action=profile;u=2062";
 
 	public static final String AUTHOR_TWITTER_URL = "https://twitter.com/#!/HashEngineering";

@@ -11,10 +11,10 @@ FEATURES:
 • וידגט להצגת יתרה.
 
 בהתקנה ראשונה עלול להיראות מסך לבן לזמן מה, הדבר תקין.
-לפרטים נוספים : http://digitalcoin.co
+לפרטים נוספים : http://www.qrk.cc/
 
 הארנק הוא פרויקט בקוד פתוח בגוגל, אם ברצונך לתרום:
-https://github.com/HashEngineering/digitalcoin-wallet
+https://github.com/HashEngineering/Quark-wallet
 
 רישיון : GPLv3
 שים לב: השימוש הוא באחריות המשתמש.

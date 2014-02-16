@@ -33,7 +33,7 @@ import android.widget.TextView;
 import de.schildbach.wallet.Constants;
 import de.schildbach.wallet.util.GenericUtils;
 import de.schildbach.wallet.util.WalletUtils;
-import de.schildbach.wallet.digitalcoin.R;
+import hashengineering.quarkcoin.wallet.R;
 
 /**
  * @author Andreas Schildbach
@@ -48,6 +48,7 @@ public final class CurrencyTextView extends TextView
 	private boolean alwaysSigned = false;
 	private RelativeSizeSpan prefixRelativeSizeSpan = null;
 	private RelativeSizeSpan insignificantRelativeSizeSpan = null;
+    private boolean reportBTC = false;
 
 	public CurrencyTextView(final Context context)
 	{
@@ -129,10 +130,19 @@ public final class CurrencyTextView extends TextView
 		if (amount != null)
 		{
 			final String s;
-			if (alwaysSigned)
-				s = GenericUtils.formatValue(amount, Constants.CURRENCY_PLUS_SIGN, Constants.CURRENCY_MINUS_SIGN, precision, shift);
-			else
-				s = GenericUtils.formatValue(amount, precision, shift);
+            if(reportBTC)
+            {
+                if (alwaysSigned)
+                    s = GenericUtils.formatValue_BTC(amount, Constants.CURRENCY_PLUS_SIGN, Constants.CURRENCY_MINUS_SIGN, precision, shift);
+                else
+                    s = GenericUtils.formatValue_BTC(amount, precision, shift);
+            }
+            else {
+			    if (alwaysSigned)
+			    	s = GenericUtils.formatValue(amount, Constants.CURRENCY_PLUS_SIGN, Constants.CURRENCY_MINUS_SIGN, precision, shift);
+			    else
+				    s = GenericUtils.formatValue(amount, precision, shift);
+            }
 
 			text = new SpannableStringBuilder(s);
 			WalletUtils.formatSignificant(text, insignificantRelativeSizeSpan);
@@ -153,4 +163,8 @@ public final class CurrencyTextView extends TextView
 
 		setText(text);
 	}
+    public void setReportingBTC(boolean reportBTC)
+    {
+        this.reportBTC = reportBTC;
+    }
 }

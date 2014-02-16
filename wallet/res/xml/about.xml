@@ -10,7 +10,7 @@
 			android:title="Copyright" />
         <Preference
                 android:summary="Version 1.1 (v1.0.1.0-g3aaa7ba-beta) and above"
-                android:title="digitalcoin Compatibility" />
+                android:title="Quark Compatibility" />
 		<Preference
 			android:key="about_license"
 			android:title="@string/about_license_title" />

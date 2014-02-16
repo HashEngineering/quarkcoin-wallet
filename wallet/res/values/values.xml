@@ -4,20 +4,20 @@
 	<string name="symbol_to">→</string>
 	<string name="symbol_from">←</string>
 	<string name="symbol_internal">⇄</string>
-	<string name="app_name">digitalcoin</string>
+	<string name="app_name">Quark (beta)</string>
 
 
 	<string-array name="preferences_precision_values">
-		<item>8</item>
-		<item>6</item>
+		<item>5</item>
 		<item>4</item>
+		<item>2</item>
 		<item>2/3</item>
 	</string-array>
 	<string-array name="preferences_precision_labels">
-		<item>DGC, 8 digits</item>
-		<item>DGC, 6 digits</item>
-		<item>DGC, 4 digits</item>
-		<item>mDGC, 2 digits</item>
+		<item>QRK, 5 digits</item>
+		<item>QRK, 4 digits</item>
+		<item>QRK, 2 digits</item>
+		<item>mQRK, 2 digits</item>
 	</string-array>
 
 </resources>

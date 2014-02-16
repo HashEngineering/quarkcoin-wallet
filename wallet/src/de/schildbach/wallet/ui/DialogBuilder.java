@@ -24,7 +24,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import de.schildbach.wallet.digitalcoin.R;
+import hashengineering.quarkcoin.wallet.R;
 
 /**
  * @author Andreas Schildbach

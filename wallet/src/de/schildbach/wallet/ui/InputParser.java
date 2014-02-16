@@ -53,7 +53,7 @@ import de.schildbach.wallet.PaymentIntent;
 import de.schildbach.wallet.util.Io;
 import de.schildbach.wallet.util.Qr;
 import com.google.bitcoin.core.CoinDefinition;
-import de.schildbach.wallet.digitalcoin.R;
+import hashengineering.quarkcoin.wallet.R;
 
 
 /**

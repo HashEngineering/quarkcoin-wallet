@@ -6,7 +6,7 @@
 
 	<artifactId>integration-android</artifactId>
 	<version>1.0</version>
-	<name>digitalcoin Integration for Android</name>
+	<name>quarkcoin Integration for Android</name>
 
 	<parent>
 		<groupId>de.schildbach.wallet</groupId>

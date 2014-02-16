@@ -50,7 +50,7 @@ import de.schildbach.wallet.ExchangeRatesProvider.ExchangeRate;
 import de.schildbach.wallet.WalletApplication;
 import de.schildbach.wallet.service.BlockchainService;
 import de.schildbach.wallet.util.WalletUtils;
-import de.schildbach.wallet.digitalcoin.R;
+import hashengineering.quarkcoin.wallet.R;
 
 /**
  * @author Andreas Schildbach
@@ -135,6 +135,7 @@ public final class WalletBalanceFragment extends Fragment
 			viewBalanceLocalFrame.setForeground(getResources().getDrawable(R.drawable.dropdown_ic_arrow_small));
 
 		viewBalanceLocal = (CurrencyTextView) view.findViewById(R.id.wallet_balance_local);
+        viewBalanceLocal.setReportingBTC(true);
 		viewBalanceLocal.setPrecision(Constants.LOCAL_PRECISION, 0);
 		viewBalanceLocal.setInsignificantRelativeSize(1);
 		viewBalanceLocal.setStrikeThru(Constants.TEST);

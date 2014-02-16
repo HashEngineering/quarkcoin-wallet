@@ -70,7 +70,7 @@ public class ExchangeRatesProvider extends ContentProvider
 		@Override
 		public String toString()
 		{
-			return getClass().getSimpleName() + '[' + currencyCode + ':' + GenericUtils.formatValue(rate, Constants.BTC_MAX_PRECISION, 0) + ']';
+			return getClass().getSimpleName() + '[' + currencyCode + ':' + GenericUtils.formatValue_BTC(rate, Constants.BTC_MAX_PRECISION, 0) + ']';
 		}
 	}
 
@@ -173,6 +173,9 @@ public class ExchangeRatesProvider extends ContentProvider
 		else if (selection.equals(KEY_CURRENCY_CODE))
 		{
 			final ExchangeRate rate = bestExchangeRate(selectionArgs[0]);
+
+            if(rate == null)
+                return null;
 
 			cursor.newRow().add(rate.currencyCode.hashCode()).add(rate.currencyCode).add(rate.rate.longValue()).add(rate.source);
 		}
@@ -326,6 +329,69 @@ public class ExchangeRatesProvider extends ContentProvider
 
         return null;
     }
+    private static Object getCoinValueBTC_BTER()
+    {
+        Date date = new Date();
+        long now = date.getTime();
+
+
+
+        //final Map<String, ExchangeRate> rates = new TreeMap<String, ExchangeRate>();
+        // Keep the LTC rate around for a bit
+        Double btcRate = 0.0;
+        String currency = CoinDefinition.cryptsyMarketCurrency;
+        String url = "http://data.bter.com/api/1/ticker/"+ CoinDefinition.coinTicker.toLowerCase() + "_" + CoinDefinition.cryptsyMarketCurrency.toLowerCase();
+
+
+
+
+
+        try {
+            // final String currencyCode = currencies[i];
+            final URL URL_bter = new URL(url);
+            final URLConnection connection = URL_bter.openConnection();
+            connection.setConnectTimeout(Constants.HTTP_TIMEOUT_MS * 2);
+            connection.setReadTimeout(Constants.HTTP_TIMEOUT_MS * 2);
+            connection.connect();
+
+            final StringBuilder content = new StringBuilder();
+
+            Reader reader = null;
+            try
+            {
+                reader = new InputStreamReader(new BufferedInputStream(connection.getInputStream(), 1024));
+                Io.copy(reader, content);
+                final JSONObject head = new JSONObject(content.toString());
+                String result = head.getString("result");
+                if(result.equals("true"))
+                {
+
+                    Double averageTrade = head.getDouble("avg");
+
+
+                    if(currency.equalsIgnoreCase("BTC"))
+                        btcRate = averageTrade;
+                }
+
+            }
+            finally
+            {
+                if (reader != null)
+                    reader.close();
+            }
+            return btcRate;
+        }
+        catch (final IOException x)
+        {
+            x.printStackTrace();
+        }
+        catch (final JSONException x)
+        {
+            x.printStackTrace();
+        }
+
+        return null;
+    }
 
 
 	private static Map<String, ExchangeRate> requestExchangeRates(final URL url, final String... fields)
@@ -339,11 +405,16 @@ public class ExchangeRatesProvider extends ContentProvider
 		{
 
             Double btcRate = 0.0;
-
+            boolean cryptsyValue = true;
             Object result = getCoinValueBTC();
 
             if(result == null)
-                return null;
+            {
+                result = getCoinValueBTC_BTER();
+                cryptsyValue = false;
+                if(result == null)
+                    return null;
+            }
 
             else btcRate = (Double)result;
 
@@ -363,8 +434,6 @@ public class ExchangeRatesProvider extends ContentProvider
 
 				final Map<String, ExchangeRate> rates = new TreeMap<String, ExchangeRate>();
 
-                //Add Bitcoin information
-                rates.put(CoinDefinition.cryptsyMarketCurrency, new ExchangeRate(CoinDefinition.cryptsyMarketCurrency, GenericUtils.toNanoCoins(String.format("%.8f", btcRate).replace(",", "."), 0), "pubapi.cryptsy.com"));
 
 				final JSONObject head = new JSONObject(content.toString());
 				for (final Iterator<String> i = head.keys(); i.hasNext();)
@@ -386,7 +455,7 @@ public class ExchangeRatesProvider extends ContentProvider
 
                                     rateStr = String.format("%.8f", rateForBTC * btcRate);
 
-									final BigInteger rate = GenericUtils.toNanoCoins(rateStr, 0);
+									final BigInteger rate = GenericUtils.toNanoCoins_BTC(rateStr, 0);
 
 									if (rate.signum() > 0)
 									{
@@ -406,7 +475,11 @@ public class ExchangeRatesProvider extends ContentProvider
 
 				log.info("fetched exchange rates from {}, took {} ms", url, (System.currentTimeMillis() - start));
 
-				return rates;
+                //Add Bitcoin information
+                rates.put(CoinDefinition.cryptsyMarketCurrency, new ExchangeRate(CoinDefinition.cryptsyMarketCurrency, GenericUtils.toNanoCoins_BTC(String.format("%.8f", btcRate).replace(",", "."), 0), cryptsyValue ? "pubapi.cryptsy.com" : "data.bter.com"));
+
+
+                return rates;
 			}
 			else
 			{

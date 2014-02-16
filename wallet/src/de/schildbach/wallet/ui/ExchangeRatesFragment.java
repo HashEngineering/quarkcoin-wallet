@@ -53,7 +53,7 @@ import de.schildbach.wallet.WalletApplication;
 import de.schildbach.wallet.service.BlockchainService;
 import de.schildbach.wallet.util.GenericUtils;
 import de.schildbach.wallet.util.WalletUtils;
-import de.schildbach.wallet.digitalcoin.R;
+import hashengineering.quarkcoin.wallet.R;
 
 /**
  * @author Andreas Schildbach
@@ -292,11 +292,13 @@ public final class ExchangeRatesFragment extends SherlockListFragment implements
 			currencyCodeView.setText(exchangeRate.currencyCode);
 
 			final CurrencyTextView rateView = (CurrencyTextView) view.findViewById(R.id.exchange_rate_row_rate);
+            rateView.setReportingBTC(true);
 			rateView.setPrecision(Constants.LOCAL_PRECISION, 0);
 			rateView.setAmount(WalletUtils.localValue(rateBase, exchangeRate.rate));
 
 			final CurrencyTextView walletView = (CurrencyTextView) view.findViewById(R.id.exchange_rate_row_balance);
-			walletView.setPrecision(Constants.LOCAL_PRECISION, 0);
+            walletView.setReportingBTC(true);
+            walletView.setPrecision(Constants.LOCAL_PRECISION, 0);
 			if (!replaying)
 			{
 				walletView.setAmount(WalletUtils.localValue(balance, exchangeRate.rate));

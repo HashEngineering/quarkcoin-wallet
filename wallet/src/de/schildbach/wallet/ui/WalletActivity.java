@@ -91,7 +91,7 @@ import de.schildbach.wallet.util.Nfc;
 import de.schildbach.wallet.util.WalletUtils;
 
 import com.google.bitcoin.core.CoinDefinition;
-import de.schildbach.wallet.digitalcoin.R;
+import hashengineering.quarkcoin.wallet.R;
 
 
 /**
@@ -586,7 +586,7 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 		final String base = Constants.VERSION_URL + (versionNameSplit >= 0 ? packageInfo.versionName.substring(versionNameSplit) : "");
 		final String url = base + "?current=" + packageInfo.versionCode;
 
-		new HttpGetThread(getAssets(), url)
+		/*new HttpGetThread(getAssets(), url)
 		{
 			@Override
 			protected void handleLine(final String line, final long serverTime)
@@ -646,14 +646,14 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 					CrashReporter.saveBackgroundTrace(new RuntimeException(url, x), packageInfo);
 				}
 			}
-		}.start();
+		}.start();*/
 
-		if (!config.hasBtcPrecision() && CoinDefinition.coinPrecision != CoinDefinition.CoinPrecision.Coins
+		/*if (!config.hasBtcPrecision() && CoinDefinition.coinPrecision != CoinDefinition.CoinPrecision.Coins
 				&& config.changeLogVersionCodeCrossed(application.packageInfo().versionCode, DEFAULT_PRECISION_CHANGE_VERSION_CODE))
 		{
 			showDialog(DIALOG_CHANGELOG);
 		}
-		else if (CrashReporter.hasSavedCrashTrace())
+		else*/ if (CrashReporter.hasSavedCrashTrace())
 		{
 			final StringBuilder stackTrace = new StringBuilder();
 

@@ -12,10 +12,10 @@ FUNKTIONER:
 • App-widget for Bitcoin-saldo.
 
 Du kan finde mere om Bitcoin på
-http://digitalcoin.co
+http://www.qrk.cc/
 
 Hvis du vil bidrage til Bitcoin Wallet, kan projektet findes på
-https://github.com/HashEngineering/digitalcoin-wallet
+https://github.com/HashEngineering/Quark-wallet
 
 Licens: GPLv3
 Brug for egen risiko!

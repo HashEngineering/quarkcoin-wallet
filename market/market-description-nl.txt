@@ -1,19 +1,19 @@
-Dit is een standalone digitalcoin Wallet voor uw Android apparaat. U kan direct digitalcoins versturen tussen telefoons door simpelweg de QR-code te scannen die de app weergeeft of via NFC (Near Field Communication).
+Dit is een standalone Quark Wallet voor uw Android apparaat. U kan direct Quarks versturen tussen telefoons door simpelweg de QR-code te scannen die de app weergeeft of via NFC (Near Field Communication).
 
 FUNCTIES:
 
-• Weergeven van het wallet saldo in digitalcoin en verschillende andere valuta.
-• Verzenden en ontvangen van digitalcoin via NFC, QR-codes of digitalcoin URLs.
-• Adresboek voor veelgebruikte digitalcoin adressen.
+• Weergeven van het wallet saldo in Quark en verschillende andere valuta.
+• Verzenden en ontvangen van Quark via NFC, QR-codes of Quark URLs.
+• Adresboek voor veelgebruikte Quark adressen.
 • Transacties ingeven tijdens het offline zijn, deze zullen worden uitgevoerd wanneer u online komt.
-• Systeem melding over digitalcoin connectiviteit en ontvangen digitalcoins.
-• Widget voor digitalcoin saldo.
+• Systeem melding over Quark connectiviteit en ontvangen Quarks.
+• Widget voor Quark saldo.
 
-Voor meer informatie over digitalcoin kunt u terecht op
-http://digitalcoin.co
+Voor meer informatie over Quark kunt u terecht op
+http://www.qrk.cc/
 
-Als u een bijdrage wil leveren aan digitalcoin Wallet, het project is te vinden op
-https://github.com/HashEngineering/digitalcoin-wallet
+Als u een bijdrage wil leveren aan Quark Wallet, het project is te vinden op
+https://github.com/HashEngineering/Quark-wallet
 
 Licentie: GPLv3
 Gebruik op eigen risico!

@@ -1,4 +1,4 @@
-Welcome to _digitalcoin Wallet_, a standalone digitalcoin payment app for your Android device!
+Welcome to _Quark Wallet_, a standalone Quark payment app for your Android device!
 
 This project contains several sub-projects:
 

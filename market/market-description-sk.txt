@@ -12,10 +12,10 @@ FUNKCIE:
 • Widget s celkovým zostatkom.
 
 Viac informácií o Bitcoine
-http://digitalcoin.co
+http://www.qrk.cc/
 
 Ak chcete prispieť do projektu Bitcoin Wallet nájdete ho na adrese
-https://github.com/HashEngineering/digitalcoin-wallet
+https://github.com/HashEngineering/Quark-wallet
 
 Licencia: GPLv3
 Použitie len na vlastné riziko!

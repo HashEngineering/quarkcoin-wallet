@@ -1,21 +1,21 @@
-Porta i tuoi digitalcoin sempre con te, in tasca! Paghi velocemente scansionando un QR-code. Come un commerciante, riceverai i pagamenti sicuri e istantanei. digitalcoin Wallet è la prima digitalcoin app mobile, e probabilmente anche la più sicura!
+Porta i tuoi Quark sempre con te, in tasca! Paghi velocemente scansionando un QR-code. Come un commerciante, riceverai i pagamenti sicuri e istantanei. Quark Wallet è la prima Quark app mobile, e probabilmente anche la più sicura!
 
 CARATTERISTICHE:
 
 • Non è necessaria alcuna registrazione, servizio web o cloud! Questo portafoglio è de-centralizzato e peer to peer.
-• Mostra l'ammontare di digitalcoin in DGC e mDGC.
+• Mostra l'ammontare di Quark in QRK e mQRK.
 • Conversione verso e dalle monete nazionali.
-• Invio e ricevimento di digitalcoin tramite NFC, codici QR o URL digitalcoin.
-• Rubrica degli indirizzi per usare indirizzi digitalcoin regolarmente.
+• Invio e ricevimento di Quark tramite NFC, codici QR o URL Quark.
+• Rubrica degli indirizzi per usare indirizzi Quark regolarmente.
 • Quando sei offline, puoi comunque ancora pagare via Bluetooth.
 • Sistema di notifica per le monete ricevute.
 • App Widget per il saldo Bitcoin
 
-Puoi trovare altri dettagli su digitalcoin su
-http://digitalcoin.co
+Puoi trovare altri dettagli su Quark su
+http://www.qrk.cc/
 
-Se vuoi contribuire a digitalcoin Wallet, il progetto si trova su
-https://github.com/HashEngineering/digitalcoin-wallet
+Se vuoi contribuire a Quark Wallet, il progetto si trova su
+https://github.com/HashEngineering/Quark-wallet
 
 Licenza: GPLv3
 Usalo a tuo rischio!

@@ -2,10 +2,10 @@
 <resources>
 
 	<string-array name="preferences_precision_labels">
-		<item>DGC, 8 decimaler</item>
-		<item>DGC, 6 decimaler</item>
-		<item>DGC, 4 decimaler</item>
-		<item>mDGC, 2 decimaler</item>
+		<item>QRK, 8 decimaler</item>
+		<item>QRK, 6 decimaler</item>
+		<item>QRK, 4 decimaler</item>
+		<item>mQRK, 2 decimaler</item>
 	</string-array>
 
 </resources>

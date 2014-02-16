@@ -1,19 +1,19 @@
-Tato aplikace je peněženka s digitalcoiny pro systém Android. Můžete posílat digitalcoiny mezi telefony prostým naskenováním QR kódu, který je zobrazen aplikací, nebo pomocí NFC (Near Field Communication).
+Tato aplikace je peněženka s Quarky pro systém Android. Můžete posílat Quarky mezi telefony prostým naskenováním QR kódu, který je zobrazen aplikací, nebo pomocí NFC (Near Field Communication).
 
 VLASTNOSTI:
 
-• Zobrazení zůstatku peněženky v digitalcoinech a několika jiných měnách.
-• Odesílání a přijímání digitalcoinů pomocí NFC, QR-kódů, nebo digitalcoin adres.
+• Zobrazení zůstatku peněženky v Quarkech a několika jiných měnách.
+• Odesílání a přijímání Quarků pomocí NFC, QR-kódů, nebo Quark adres.
 • Adresář pro často používané adresy.
 • Možnost zadávání transakcí v offline režimu, k jejich zpracování dojde po připojení.
-• Oznamování v liště při synchronizaci a při přijetí digitalcoinů.
+• Oznamování v liště při synchronizaci a při přijetí Quarků.
 • Widget s celkovým zůstatkem.
 
-Více informací o digitalcoinech
-http://digitalcoin.co
+Více informací o Quarkech
+http://www.qrk.cc
 
-Pokud chcete přispět do projektu digitalcoin Wallet, naleznete jej na adrese
-https://github.com/HashEngineering/digitalcoin-wallet
+Pokud chcete přispět do projektu Quark Wallet, naleznete jej na adrese
+https://github.com/HashEngineering/Quark-wallet
 
 License: GPLv3
 Použití pouze na vlastní riziko!

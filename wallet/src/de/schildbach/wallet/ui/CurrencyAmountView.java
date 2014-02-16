@@ -47,7 +47,7 @@ import com.google.bitcoin.core.Transaction;
 import de.schildbach.wallet.Constants;
 import de.schildbach.wallet.util.GenericUtils;
 import de.schildbach.wallet.util.WalletUtils;
-import de.schildbach.wallet.digitalcoin.R;
+import hashengineering.quarkcoin.wallet.R;
 
 /**
  * @author Andreas Schildbach
@@ -75,6 +75,8 @@ public final class CurrencyAmountView extends FrameLayout
 	private View contextButton;
 	private Listener listener;
 	private OnClickListener contextButtonClickListener;
+
+    private boolean reportBTC = false;
 
 	public CurrencyAmountView(final Context context)
 	{
@@ -202,7 +204,7 @@ public final class CurrencyAmountView extends FrameLayout
 	public BigInteger getAmount()
 	{
 		if (isValidAmount(false))
-			return GenericUtils.toNanoCoins(textView.getText().toString().trim(), shift);
+			return reportBTC ? GenericUtils.toNanoCoins_BTC(textView.getText().toString().trim(), shift) : GenericUtils.toNanoCoins(textView.getText().toString().trim(), shift);
 		else
 			return null;
 	}
@@ -213,8 +215,18 @@ public final class CurrencyAmountView extends FrameLayout
 			textViewListener.setFire(false);
 
 		if (amount != null)
-			textView.setText(amountSigned ? GenericUtils.formatValue(amount, Constants.CURRENCY_PLUS_SIGN, Constants.CURRENCY_MINUS_SIGN,
+        {
+            if(reportBTC)
+            {
+                textView.setText(amountSigned ? GenericUtils.formatValue_BTC(amount, Constants.CURRENCY_PLUS_SIGN, Constants.CURRENCY_MINUS_SIGN,
+                        inputPrecision, shift) : GenericUtils.formatValue_BTC(amount, inputPrecision, shift));
+            }
+            else
+            {
+			    textView.setText(amountSigned ? GenericUtils.formatValue(amount, Constants.CURRENCY_PLUS_SIGN, Constants.CURRENCY_MINUS_SIGN,
 					inputPrecision, shift) : GenericUtils.formatValue(amount, inputPrecision, shift));
+            }
+        }
 		else
 			textView.setText(null);
 
@@ -278,7 +290,7 @@ public final class CurrencyAmountView extends FrameLayout
 		{
 			if (!amount.isEmpty())
 			{
-				final BigInteger nanoCoins = GenericUtils.toNanoCoins(amount, shift);
+				final BigInteger nanoCoins = reportBTC ? GenericUtils.toNanoCoins_BTC(amount, shift): GenericUtils.toNanoCoins(amount, shift);
 
 				// exactly zero
 				if (zeroIsValid && nanoCoins.signum() == 0)
@@ -429,4 +441,9 @@ public final class CurrencyAmountView extends FrameLayout
 			return currencyCode;
 		}
 	}
+    public void setReportBTC(boolean reportBTC)
+    {
+        this.reportBTC = reportBTC;
+    }
+
 }
