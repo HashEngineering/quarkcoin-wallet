@@ -87,7 +87,7 @@ public class Constants
 
 	public static final int BTC_MAX_PRECISION = 5;      //For Quark, Maximum of 5 decimal places for QRK
 	public static final int MBTC_MAX_PRECISION = 2;     //For Quark, maximum of 2 decimal places for mQRK
-	public static final int LOCAL_PRECISION = 4;        //For Quark
+	public static final int LOCAL_PRECISION = 6;        //For Quark in BTC, USD, etc
 
 	public static final String DONATION_ADDRESS = CoinDefinition.DONATION_ADDRESS;
 	public static final String REPORT_EMAIL = "hashengineeringsolutions@gmail.com";

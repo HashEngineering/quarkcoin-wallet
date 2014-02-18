@@ -90,7 +90,7 @@ public abstract class InputParser
 					error(R.string.input_parser_io_error, x.getMessage());
 				}
 			}
-			else if (input.startsWith(CoinDefinition.coinURIScheme +":"))
+			else if (input.startsWith(CoinDefinition.coinURIScheme +":") || input.startsWith(CoinDefinition.coinURIScheme2+":"))
 			{
 				try
 				{

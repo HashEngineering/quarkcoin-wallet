@@ -174,8 +174,8 @@ public class ExchangeRatesProvider extends ContentProvider
 		{
 			final ExchangeRate rate = bestExchangeRate(selectionArgs[0]);
 
-            if(rate == null)
-                return null;
+            //if(rate == null)
+            //    return null;
 
 			cursor.newRow().add(rate.currencyCode.hashCode()).add(rate.currencyCode).add(rate.rate.longValue()).add(rate.source);
 		}
@@ -309,14 +309,14 @@ public class ExchangeRatesProvider extends ContentProvider
                 //euros = euros.replace(",", ".");
                 //rates.put(currencyCryptsy, new ExchangeRate(currencyCryptsy, Utils.toNanoCoins(euros), URLCryptsy.getHost()));
                 if(currencyCryptsy.equalsIgnoreCase("BTC")) btcRate = averageTrade;
-
+                return btcRate;
             }
             finally
             {
                 if (reader != null)
                     reader.close();
             }
-            return btcRate;
+
         }
         catch (final IOException x)
         {
@@ -372,14 +372,14 @@ public class ExchangeRatesProvider extends ContentProvider
                     if(currency.equalsIgnoreCase("BTC"))
                         btcRate = averageTrade;
                 }
-
+                return btcRate;
             }
             finally
             {
                 if (reader != null)
                     reader.close();
             }
-            return btcRate;
+
         }
         catch (final IOException x)
         {
@@ -416,7 +416,7 @@ public class ExchangeRatesProvider extends ContentProvider
                     return null;
             }
 
-            else btcRate = (Double)result;
+            btcRate = (Double)result;
 
 
 			connection = (HttpURLConnection) url.openConnection();
@@ -476,7 +476,12 @@ public class ExchangeRatesProvider extends ContentProvider
 				log.info("fetched exchange rates from {}, took {} ms", url, (System.currentTimeMillis() - start));
 
                 //Add Bitcoin information
-                rates.put(CoinDefinition.cryptsyMarketCurrency, new ExchangeRate(CoinDefinition.cryptsyMarketCurrency, GenericUtils.toNanoCoins_BTC(String.format("%.8f", btcRate).replace(",", "."), 0), cryptsyValue ? "pubapi.cryptsy.com" : "data.bter.com"));
+                if(rates.size() == 0)
+                {
+                    int i = 0;
+                    i++;
+                }
+                else rates.put(CoinDefinition.cryptsyMarketCurrency, new ExchangeRate(CoinDefinition.cryptsyMarketCurrency, GenericUtils.toNanoCoins_BTC(String.format("%.8f", btcRate).replace(",", "."), 0), cryptsyValue ? "pubapi.cryptsy.com" : "data.bter.com"));
 
 
                 return rates;
