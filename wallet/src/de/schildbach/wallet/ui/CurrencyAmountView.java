@@ -238,7 +238,7 @@ public final class CurrencyAmountView extends FrameLayout
 	{
 		final SpannableStringBuilder hint;
 		if (amount != null)
-			hint = new SpannableStringBuilder(GenericUtils.formatValue(amount, hintPrecision, shift));
+			hint = new SpannableStringBuilder(reportBTC ? GenericUtils.formatValue_BTC(amount, hintPrecision, shift) : GenericUtils.formatValue(amount, hintPrecision, shift));
 		else
 			hint = new SpannableStringBuilder("0.00");
 

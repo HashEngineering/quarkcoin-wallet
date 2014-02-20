@@ -148,7 +148,7 @@ public final class CurrencyCalculatorLink
 				if (btcAmount != null)
 				{
 					localAmountView.setAmount(null, false);
-					localAmountView.setHint(WalletUtils.localValue_BTC(btcAmount, exchangeRate.rate));
+					localAmountView.setHint(WalletUtils.localValue5_BTC(btcAmount, exchangeRate.rate));
 					btcAmountView.setHint(null);
 				}
 			}

@@ -141,7 +141,10 @@ public class WalletUtils
     {
         return btcValue.multiply(rate).divide(GenericUtils.ONE_BTCreal);
     }
-
+    public static BigInteger localValue5_BTC(@Nonnull final BigInteger btcValue5, @Nonnull final BigInteger rate)
+    {
+        return btcValue5.multiply(rate).divide(GenericUtils.ONE_BTCreal).multiply(BigInteger.valueOf(1000));
+    }
 
     public static BigInteger btcValue(@Nonnull final BigInteger localValue, @Nonnull final BigInteger rate)
 	{

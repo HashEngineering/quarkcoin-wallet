@@ -1,4 +1,13 @@
 Quark Wallet
+v0.1.2
+* fixed a send bug that would crash the app due to a BTC precision issue.
+* Added native support for the Proof of Work Hash Function; may speed up syncing and use less power.
+
+v0.1.1
+* Sending coins using local currency inputs:  This should work better (before $100 was converted to 1.29 QRK instead of 1290 QRK).
+* Exchange Rate information sometimes displayed only BTC with a 0.00 value.  This was resulting from a Cryptsy related error.  BTER has been added as a backup exchange for QRK price.
+* Changed default units from mQRK to QRK
+* Added URI scheme quarkcoin:
 v0.1.0
 * First Beta Version
 
