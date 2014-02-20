@@ -5,8 +5,8 @@
 
 	package="hashengineering.quarkcoin.wallet"
 	android:installLocation="internalOnly"
-	android:versionCode="10012"
-	android:versionName="0.1.2" >
+	android:versionCode="10013"
+	android:versionName="0.1.3" >
 
 
 	<uses-sdk

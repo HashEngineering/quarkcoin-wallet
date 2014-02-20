@@ -181,6 +181,7 @@ public final class RequestCoinsFragment extends SherlockFragment
 		final CurrencyAmountView localAmountView = (CurrencyAmountView) view.findViewById(R.id.request_coins_amount_local);
 		localAmountView.setInputPrecision(Constants.LOCAL_PRECISION);
 		localAmountView.setHintPrecision(Constants.LOCAL_PRECISION);
+        localAmountView.setReportBTC(true);
 		amountCalculatorLink = new CurrencyCalculatorLink(btcAmountView, localAmountView);
 
 		addressView = (Spinner) view.findViewById(R.id.request_coins_fragment_address);
