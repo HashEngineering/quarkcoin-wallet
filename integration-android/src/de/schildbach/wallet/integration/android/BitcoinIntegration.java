@@ -136,15 +136,15 @@ public final class BitcoinIntegration
 		return txHash;
 	}
 
-	private static final int NANOCOINS_PER_COIN = 100000000;
+	private static final int NANOCOINS_PER_COIN = 100000;
 
 	private static Intent makeIntent(final String address, final Long amount)
 	{
-		final StringBuilder uri = new StringBuilder("Quark:");
+		final StringBuilder uri = new StringBuilder("quark:");
 		if (address != null)
 			uri.append(address);
 		if (amount != null)
-			uri.append("?amount=").append(String.format("%d.%08d", amount / NANOCOINS_PER_COIN, amount % NANOCOINS_PER_COIN));
+			uri.append("?amount=").append(String.format("%d.%05d", amount / NANOCOINS_PER_COIN, amount % NANOCOINS_PER_COIN));
 
 		final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri.toString()));
 
@@ -173,7 +173,7 @@ public final class BitcoinIntegration
 	{
 		Toast.makeText(context, "No Quark application found.\nPlease install Quark Wallet.", Toast.LENGTH_LONG).show();
 
-		final Intent marketIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=de.schildbach.wallet"));
+		final Intent marketIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=hashengineering.quark.wallet"));
 		final Intent binaryIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://code.google.com/p/bitcoin-wallet/downloads/list"));
 
 		final PackageManager pm = context.getPackageManager();

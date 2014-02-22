@@ -5,8 +5,8 @@
 
 	package="hashengineering.quarkcoin.wallet"
 	android:installLocation="internalOnly"
-	android:versionCode="10013"
-	android:versionName="0.1.3" >
+	android:versionCode="10014"
+	android:versionName="0.1.4" >
 
 
 	<uses-sdk
@@ -80,7 +80,7 @@
 			<intent-filter>
 				<action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
-				<data android:mimeType="application/x-dgctx" />
+				<data android:mimeType="application/x-qrktx" />
 
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
@@ -95,7 +95,7 @@
 			<intent-filter android:label="@string/send_coins_activity_title" >
 				<action android:name="android.intent.action.VIEW" />
 
-				<data android:scheme="bitcoin" />
+				<data android:scheme="quark" />
 
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
@@ -103,7 +103,7 @@
 			<intent-filter android:label="@string/send_coins_activity_title" >
 				<action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
-				<data android:scheme="bitcoin" />
+				<data android:scheme="quark" />
 
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
@@ -117,7 +117,7 @@
 			<intent-filter android:label="@string/send_coins_activity_title" >
 				<action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
-				<data android:mimeType="application/bitcoin-paymentrequest" />
+				<data android:mimeType="application/quark-paymentrequest" />
 
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
@@ -165,7 +165,7 @@
 
 				<category android:name="android.intent.category.DEFAULT" />
 
-				<data android:mimeType="x-bitcoin/private-keys" />
+				<data android:mimeType="x-quarkcoin/private-keys" />
 				<data android:mimeType="application/octet-stream" />
 			</intent-filter>
 		</activity>
