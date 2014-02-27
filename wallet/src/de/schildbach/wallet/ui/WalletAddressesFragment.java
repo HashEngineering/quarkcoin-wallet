@@ -219,7 +219,7 @@ public final class WalletAddressesFragment extends SherlockListFragment
 						return true;
 
 					case R.id.wallet_addresses_context_browse:
-						startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.EXPLORE_BASE_URL + "address/"
+						startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.EXPLORE_BASE_URL + "address/info/"
 								+ getAddress(position).toString())));
 
 						mode.finish();
