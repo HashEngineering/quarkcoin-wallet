@@ -30,6 +30,11 @@
         <Preference
                 android:key="about_credits_forum"
                 android:title="@string/about_credits_forum_title" />
+        <Preference
+                android:key="about_credits_graphics"
+                android:summary="@string/about_credits_graphics_summary"
+                android:title="@string/about_credits_graphics_title" />
+
 		<!--Preference
 			android:key="about_community_googleplus"
 			android:summary="@string/about_community_googleplus_summary"

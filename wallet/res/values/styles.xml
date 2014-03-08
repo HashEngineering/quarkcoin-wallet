@@ -17,8 +17,8 @@
 	<style name="My.Theme.Dialog" parent="@style/Theme.Sherlock.Light.Dialog" />
 
 	<style name="My.Widget.ActionBar" parent="@style/Widget.Sherlock.Light.ActionBar.Solid.Inverse">
-		<item name="background">@drawable/action_bar_background</item>
-		<item name="android:background">@drawable/action_bar_background</item>
+		<item name="background">@drawable/action_bar</item>
+		<item name="android:background">@drawable/action_bar</item>
 		<item name="titleTextStyle">@style/My.TextAppearance.Widget.ActionBar.Title</item>
 		<item name="android:titleTextStyle">@style/My.TextAppearance.Widget.ActionBar.Title</item>
 		<item name="subtitleTextStyle">@style/My.TextAppearance.Widget.ActionBar.Subtitle</item>

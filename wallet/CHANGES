@@ -1,4 +1,11 @@
 Quark Wallet
+v0.1.6
+* Added simple splash screen
+* Added some background images for a new look.
+
+v0.1.5
+* Changed Block Explorer to qrk.blockr.io
+
 v0.1.2
 * fixed a send bug that would crash the app due to a BTC precision issue.
 * Added native support for the Proof of Work Hash Function; may speed up syncing and use less power.
