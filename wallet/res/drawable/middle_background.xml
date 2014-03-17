@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+            android:drawable="@drawable/middle"
+            android:id="@+id/middle_background_image"
+            android:scaleType="center"
+            />
+    <item
+            android:drawable="@drawable/app_icon_large"
+            android:id="@+id/app_icon_large"
+            android:scaleType="center"
+
+            />
+
+</layer-list>
+

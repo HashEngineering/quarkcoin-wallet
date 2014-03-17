@@ -174,10 +174,8 @@ public class ExchangeRatesProvider extends ContentProvider
 		{
 			final ExchangeRate rate = bestExchangeRate(selectionArgs[0]);
 
-            //if(rate == null)
-            //    return null;
-
-			cursor.newRow().add(rate.currencyCode.hashCode()).add(rate.currencyCode).add(rate.rate.longValue()).add(rate.source);
+            if (rate != null)
+			    cursor.newRow().add(rate.currencyCode.hashCode()).add(rate.currencyCode).add(rate.rate.longValue()).add(rate.source);
 		}
 
 		return cursor;
@@ -453,7 +451,7 @@ public class ExchangeRatesProvider extends ContentProvider
 								{
                                     double rateForBTC = Double.parseDouble(rateStr);
 
-                                    rateStr = String.format("%.8f", rateForBTC * btcRate);
+                                    rateStr = String.format("%.8f", rateForBTC * btcRate).replace(",", ".");
 
 									final BigInteger rate = GenericUtils.toNanoCoins_BTC(rateStr, 0);
 

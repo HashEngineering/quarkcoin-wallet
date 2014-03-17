@@ -1,4 +1,12 @@
 Quark Wallet
+v0.1.7
+* Fixed formatting bug in Exchange Rates provider that resulted in no exchange rates (from least two reports)
+* Fixed bug in Exchange Rates Provider that would crash the app (from at least three reports)
+* Updated the two pane view to use the "middle" graphic
+* Updated splash screen with bigger QRK logo and Beta text reminder to send crash reports.
+* Updated footer graphics to display properly
+* updated with more reliable nodes (though there is a 6 connection limitation still)
+
 v0.1.6
 * Added simple splash screen
 * Added some background images for a new look.

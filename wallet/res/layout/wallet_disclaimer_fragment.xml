@@ -4,4 +4,5 @@
 	android:gravity="center"
 	android:padding="4dp"
 	android:textColor="@android:color/white"
-	android:textSize="@dimen/font_size_tiny" />
+	android:textSize="@dimen/font_size_tiny"
+    android:background="@drawable/bottom_include_bottom"/>

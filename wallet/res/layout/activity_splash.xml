@@ -3,13 +3,23 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="@drawable/background2" >
-
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="false"
+            android:text="This is beta software.  Please email crash reports to help with fixing bugs."
+            android:textStyle="bold"
+            />
 <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/app_icon" />
+        android:src="@drawable/app_icon_large" />
 
 <TextView
         android:layout_width="fill_parent"

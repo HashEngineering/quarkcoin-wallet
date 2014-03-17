@@ -4,7 +4,8 @@
 	android:divider="@drawable/divider_dark"
 	android:dividerPadding="8dp"
 	android:measureWithLargestChild="true"
-	android:orientation="horizontal" >
+	android:orientation="horizontal"
+    android:background="@drawable/bottom_include_top">
 
 	<Button
 		android:id="@+id/wallet_actions_request"
