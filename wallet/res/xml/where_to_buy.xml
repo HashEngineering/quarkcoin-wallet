@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<PreferenceCategory android:title="@string/where_to_buy_title" >
+		<Preference
+			android:key="exchange_01"
+			android:summary="https://www.cryptsy.com/markets/view/71"
+			android:title="Cryptsy" />
+        <Preference
+                android:key="exchange_02"
+                android:summary="https://www.vaultofsatoshi.com/orderbook"
+                android:title="Vault Of Satoshi" />
+	</PreferenceCategory>
+
+</PreferenceScreen>
+
+<!--
+VaultOfSatoshi.com - USD, CAD
+CoinMKT.com - USD
+C-Cex.com - USD, BTC
+LiteBit.eu - EUR
+Cryptokopen.eu - EUR
+Bittylicious.com - GBP
+Coinclutch.com - AUD
+BTC38.com - CNY
+Beedui.com - CNY
+BTC-8.com - CNY
+Lilion Transfer - USD,EUR,GBP,RUB,etc
+Cryptsy.com - BTC, LTC Video1 Video2 Video3
+BTER.com - BTC Video
+Coins-E.com - BTC
+Vircurex.com - BTC
+AGX.io - BTC
+SwissCEX.com - BTC LTC XPM
+CoinedUp.com - BTC
+
+<ul>
+<li><p><a href="http://goo.gl/kWWJbO">VaultOfSatoshi.com</a> - USD, CAD</p></li>
+<li><p><a href="https://coinmkt.com">CoinMKT.com</a> - USD</p></li>
+<li><p><a href="http://is.gd/ldK29v">C-Cex.com</a> - USD, BTC</p></li>
+<li><p><a href="https://litebit.eu/coin/qrk/en/">LiteBit.eu</a> - EUR</p></li>
+<li><p><a href="http://is.gd/LTjmj1">Cryptokopen.eu</a> - EUR</p></li>
+<li><p><a href="http://goo.gl/GHn3gc">Bittylicious.com</a> - GBP</p></li>
+<li><p><a href="https://coinclutch.com/buy/qrk">Coinclutch.com</a> - AUD</p></li>
+<li><p><a href="http://is.gd/dsLnLn">BTC38.com</a> - CNY</p></li>
+<li><p><a href="http://goo.gl/KobzCz">Beedui.com</a> - CNY</p></li>
+<li><p><a href="http://btc-8.com/?QRK_CNY">BTC-8.com</a> - CNY</p></li>
+<li><p><a href="http://is.gd/mjmLNZ">Lilion Transfer</a> - USD,EUR,GBP,RUB,etc</p></li>
+<li><p><a href="https://www.cryptsy.com/markets/view/71">Cryptsy.com</a> - BTC, LTC </li>
+<li><p><a href="https://bter.com/trade/qrk_btc">BTER.com</a> - BTC</li>
+<li><p><a href="https://www.coins-e.com/exchange/QRK_BTC/">Coins-E.com</a> - BTC</p></li>
+<li><p><a href="http://is.gd/eXT7ZD">Vircurex.com</a> - BTC</p></li>
+<li><p><a href="http://goo.gl/5t4UHO">AGX.io</a> - BTC</p></li>
+<li><p><a href="http://is.gd/2VKH1U">SwissCEX.com</a> - BTC LTC XPM</p></li>
+<li><p><a href="http://is.gd/ZKoXU7">CoinedUp.com</a> - BTC</p></li>
+</ul>
+-->

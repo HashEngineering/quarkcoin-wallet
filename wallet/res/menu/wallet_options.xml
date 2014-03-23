@@ -30,6 +30,10 @@
 		android:id="@+id/wallet_options_exchange_rates"
 		android:showAsAction="never"
 		android:title="@string/exchange_rates_activity_title"/>
+    <item
+        android:id="@+id/where_to_buy_coins"
+        android:showAsAction="never"
+        android:title="@string/where_to_buy_title"/>
 	<item
 		android:id="@+id/wallet_options_network_monitor"
 		android:showAsAction="never"

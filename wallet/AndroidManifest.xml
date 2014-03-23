@@ -5,8 +5,8 @@
 
 	package="hashengineering.quarkcoin.wallet"
 	android:installLocation="internalOnly"
-	android:versionCode="10017"
-	android:versionName="0.1.7" >
+	android:versionCode="10018"
+	android:versionName="0.1.8" >
 
 
 	<uses-sdk
@@ -124,7 +124,7 @@
 			<intent-filter android:label="@string/send_coins_activity_title">
 				<action android:name="android.intent.action.VIEW" />
 
-				<data android:mimeType="application/bitcoin-paymentrequest" />
+				<data android:mimeType="application/quark-paymentrequest" />
 
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
@@ -170,6 +170,10 @@
 			android:name="de.schildbach.wallet.ui.AboutActivity"
 			android:label="@string/about_title"
 			android:screenOrientation="behind" />
+        <activity
+                android:name="de.schildbach.wallet.ui.WhereToBuyActivity"
+                android:label="@string/where_to_buy_title"
+                android:screenOrientation="behind" />
 		<activity
 			android:name="de.schildbach.wallet.ui.ImportKeysActivity"
 			android:configChanges="orientation|keyboard|keyboardHidden"

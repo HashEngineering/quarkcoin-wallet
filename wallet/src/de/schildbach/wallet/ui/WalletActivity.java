@@ -281,6 +281,10 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 				startActivity(new Intent(this, AboutActivity.class));
 				return true;
 
+            case R.id.where_to_buy_coins:
+                startActivity(new Intent(this, WhereToBuyActivity.class));
+                return true;
+
 			case R.id.wallet_options_safety:
 				HelpDialogFragment.page(getSupportFragmentManager(), R.string.help_safety);
 				return true;

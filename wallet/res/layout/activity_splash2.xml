@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/splash_background2" >
+    <LinearLayout
+            android:id="@+id/topbar"
+            android:orientation="vertical"
+            android:shape="rectangle"
+            android:background="#22aabf"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="30dp"
+            android:textColor="#FFFFFF"
+            android:gravity="top|center_horizontal"
+            android:text="Quark Mobile Wallet"
+            android:typeface="sans"
+            />
+        <TextView
+                android:id="@+id/splash_about_version"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textSize="18dp"
+                android:textColor="#FFFFFF"
+                android:gravity="top|center_horizontal"
+                android:layout_alignParentBottom="false"
+                android:text="Version 0.1.8"
+                />
+
+            </LinearLayout>
+    <View
+            android:layout_below="@id/topbar"
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:background="@drawable/drop_shadow"
+            >
+    </View>
+    <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="85dp"
+            android:layout_below="@+id/topbar"
+            android:src="@drawable/app_icon_large" />
+
+    <LinearLayout
+            android:id="@+id/loadingbar"
+            android:orientation="vertical"
+            android:shape="rectangle"
+            android:background="#5CFFFFFF"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottombar"
+            android:layout_marginBottom="50dp"
+            >
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:textColor="#22aabf"
+            android:gravity="center_horizontal"
+            android:text="LOADING QUARK MOBILE WALLET"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/bottombar"
+            android:orientation="vertical"
+            android:shape="rectangle"
+            android:background="#22aabf"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+
+
+
+<TextView
+        android:id="@+id/bottombar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        android:textColor="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:text="@string/splash_copyright"
+        android:textStyle="bold"
+        android:background="#22aabf"
+        />
+    </LinearLayout>
+
+</RelativeLayout>

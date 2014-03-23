@@ -234,8 +234,8 @@
 	<string name="button_paste">Paste</string>
 	<string name="button_share">Share</string>
 	<string name="button_set_as_default">Set as default</string>
-	<string name="button_request_coins">Request coins</string>
-	<string name="button_send_coins">Send coins</string>
+	<string name="button_request_coins">Request</string>
+	<string name="button_send_coins">Send</string>
 	<string name="button_scan">Scan</string>
 	<string name="button_edit_address">Add/edit address</string>
 	<string name="button_settings">Settings</string>
@@ -243,5 +243,9 @@
 	<string name="action_browse">Browse</string>
 	<string name="time_today">today</string>
 	<string name="address_unlabeled">(unlabeled)</string>
+    <string name="splash_copyright">© 2014 Hash Engineering Solutions</string>
+
+    <!-- Where to Buy -->
+    <string name="where_to_buy_title">Where to buy</string>
 
 </resources>

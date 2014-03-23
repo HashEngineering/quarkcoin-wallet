@@ -1,5 +1,7 @@
 package de.schildbach.wallet.ui;
 
+import android.widget.TextView;
+import de.schildbach.wallet.WalletApplication;
 import hashengineering.quarkcoin.wallet.R;
 
 
@@ -11,12 +13,17 @@ import hashengineering.quarkcoin.wallet.R;
 public class SplashScreen extends Activity {
 
     // Splash screen timer
-    private static int SPLASH_TIME_OUT = 3000;
+    private static int SPLASH_TIME_OUT = 4000;
+    private static final String KEY_ABOUT_VERSION = "about_version";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_splash2);
+
+        TextView version = (TextView) findViewById(R.id.splash_about_version);
+        version.setText(((WalletApplication) getApplication()).packageInfo().versionName);
+        //findPreference(KEY_ABOUT_VERSION).setSummary(((WalletApplication) getApplication()).packageInfo().versionName);
 
         new Handler().postDelayed(new Runnable() {
 

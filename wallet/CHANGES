@@ -1,4 +1,13 @@
 Quark Wallet
+v0.1.8
+* Fixed bug with crashing after running app for a long time (2 crash reports)
+* Replaced the Splash Screen with official format (not yet complete)
+* Added Where to Buy menu item
+* The 0.00 are lighter on send and request activities
+* Send coins -> Send, Request Coins -> Request for English only on buttons
+* Seeds updated
+* Fixed menu item multiplication on Address activities (from langerhans)
+
 v0.1.7
 * Fixed formatting bug in Exchange Rates provider that resulted in no exchange rates (from least two reports)
 * Fixed bug in Exchange Rates Provider that would crash the app (from at least three reports)
