@@ -30,13 +30,19 @@ import de.schildbach.wallet.Constants;
 import de.schildbach.wallet.WalletApplication;
 import hashengineering.quarkcoin.wallet.R;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.prefs.BackingStoreException;
+import java.util.prefs.NodeChangeListener;
+import java.util.prefs.PreferenceChangeListener;
+import java.util.prefs.Preferences;
+
 /**
  * @author Andreas Schildbach
  */
 public final class WhereToBuyActivity extends SherlockPreferenceActivity
 {
-
-	@Override
+  	@Override
 	protected void onCreate(final Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);

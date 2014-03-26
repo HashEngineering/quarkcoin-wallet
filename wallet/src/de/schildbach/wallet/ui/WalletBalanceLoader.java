@@ -18,6 +18,7 @@
 package de.schildbach.wallet.ui;
 
 import java.math.BigInteger;
+import java.util.concurrent.RejectedExecutionException;
 
 import javax.annotation.Nonnull;
 
@@ -30,6 +31,8 @@ import com.google.bitcoin.utils.Threading;
 
 
 import de.schildbach.wallet.util.ThrottlingWalletChangeListener;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Andreas Schildbach
@@ -37,6 +40,7 @@ import de.schildbach.wallet.util.ThrottlingWalletChangeListener;
 public final class WalletBalanceLoader extends AsyncTaskLoader<BigInteger>
 {
 	private final Wallet wallet;
+    private static final Logger log = LoggerFactory.getLogger(TransactionsListFragment.class);
 
 	public WalletBalanceLoader(final Context context, @Nonnull final Wallet wallet)
 	{
@@ -52,7 +56,14 @@ public final class WalletBalanceLoader extends AsyncTaskLoader<BigInteger>
 
 		wallet.addEventListener(walletChangeListener, Threading.SAME_THREAD);
 
-		forceLoad();
+        try
+        {
+            forceLoad();
+        }
+        catch (final RejectedExecutionException x)
+        {
+            log.info("rejected execution: " + WalletBalanceLoader.this.toString());
+        }
 	}
 
 	@Override

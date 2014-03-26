@@ -1,4 +1,9 @@
 Quark Wallet
+v0.1.9
+* Changed back to original splash screen
+* Fixed bug with crashing after running app for a long time (1 crash reports) - was in two places, this is the 2nd place
+* Added more sites to Where to Buy with Currencies.
+
 v0.1.8
 * Fixed bug with crashing after running app for a long time (2 crash reports)
 * Replaced the Splash Screen with official format (not yet complete)

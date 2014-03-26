@@ -19,10 +19,11 @@ public class SplashScreen extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash2);
+        setContentView(R.layout.activity_splash);
 
         TextView version = (TextView) findViewById(R.id.splash_about_version);
-        version.setText(((WalletApplication) getApplication()).packageInfo().versionName);
+        if(version != null)
+            version.setText(((WalletApplication) getApplication()).packageInfo().versionName);
         //findPreference(KEY_ABOUT_VERSION).setSummary(((WalletApplication) getApplication()).packageInfo().versionName);
 
         new Handler().postDelayed(new Runnable() {
