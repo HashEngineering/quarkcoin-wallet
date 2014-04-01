@@ -86,7 +86,15 @@ public final class WalletBalanceLoader extends AsyncTaskLoader<BigInteger>
 		@Override
 		public void onThrottledWalletChanged()
 		{
-			forceLoad();
+            try
+            {
+                forceLoad();
+            }
+            catch (final RejectedExecutionException x)
+            {
+                //exception handling taken from langerhans (dogecoin-wallet) 3/29/2014
+                log.info("rejected execution: " + WalletBalanceLoader.this.toString());
+            }
 		}
 	};
 }

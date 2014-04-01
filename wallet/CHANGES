@@ -1,4 +1,9 @@
 Quark Wallet
+
+v0.1.10
+* Fixed bug with crashing after running app for a long time (1 crash reports) - wasn't actually fixed in the 0.1.9
+* Fixed bug with crashing after scanning (fix taken from langerhans - DOGEcoin wallet)
+* Added more sites to Where to Buy with Currencies (removed Vicurex).
 v0.1.9
 * Changed back to original splash screen
 * Fixed bug with crashing after running app for a long time (1 crash reports) - was in two places, this is the 2nd place

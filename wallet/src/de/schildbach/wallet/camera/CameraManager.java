@@ -136,11 +136,21 @@ public final class CameraManager
 
 	public void close()
 	{
-		if (camera != null)
-		{
-			camera.stopPreview();
-			camera.release();
-		}
+        if (camera != null)
+        {
+            try
+            {
+                camera.stopPreview();
+                camera.setPreviewCallback(null);
+
+                camera.release();
+            }
+            catch (RuntimeException ignore)
+            {
+                //Swallow. We tried to release after release. We don't want to crash, eh?
+                //exception handling taken from langerhans (dogecoin-wallet) 3/29/2014
+            }
+        }
 	}
 
 	private static final Comparator<Camera.Size> numPixelComparator = new Comparator<Camera.Size>()

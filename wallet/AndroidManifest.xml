@@ -5,8 +5,8 @@
 
 	package="hashengineering.quarkcoin.wallet"
 	android:installLocation="internalOnly"
-	android:versionCode="10019"
-	android:versionName="0.1.9" >
+	android:versionCode="10110"
+	android:versionName="0.1.10" >
 
 
 	<uses-sdk
@@ -69,7 +69,7 @@
         <activity
                 android:name="de.schildbach.wallet.ui.SplashScreen"
                 android:label="@string/app_name"
-                android:screenOrientation="portrait"
+                android:screenOrientation="landscape"
                 android:theme="@android:style/Theme.Black.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
