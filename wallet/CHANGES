@@ -1,4 +1,7 @@
 Quark Wallet
+v0.1.11
+* Splash Video Test
+* Added more sites to Where to Buy
 
 v0.1.10
 * Fixed bug with crashing after running app for a long time (1 crash reports) - wasn't actually fixed in the 0.1.9
