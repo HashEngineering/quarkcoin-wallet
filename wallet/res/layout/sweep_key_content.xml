@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_form"
+            android:fillViewport="true"
+            android:scrollbars="none" >
+
+    <fragment
+        android:id="@+id/sweep_key_fragment"
+        android:name="de.langerhans.wallet.ui.SweepKeyFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/sweep_coins_fragment"/>
+
+</ScrollView>

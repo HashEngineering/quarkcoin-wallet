@@ -709,6 +709,20 @@ public class BlockchainServiceImpl extends android.app.Service implements Blockc
 		return START_NOT_STICKY;
 	}
 
+    @Override
+    public void broadcastSweepTransaction(@Nonnull Transaction tx) {
+        if (peerGroup != null)
+        {
+            log.info("broadcasting transaction " + tx.getHashAsString());
+            //tx = peerGroup.getMemoryPool().intern(tx);
+            peerGroup.broadcastTransaction(tx);
+        }
+        else
+        {
+            log.info("peergroup not available, not broadcasting transaction " + tx.getHashAsString());
+        }
+    }
+
 	@Override
 	public void onDestroy()
 	{

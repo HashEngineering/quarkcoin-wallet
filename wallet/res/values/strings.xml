@@ -218,8 +218,27 @@
 	<string name="about_credits_market_publisher_title">Other Apps of Author</string>
 
 	<string name="notification_coins_received_msg">Received %s</string>
-
 	<string name="notification_peers_connected_msg">%d peers connected</string>
+
+    <!-- sweeping stuff -->
+    <string name="sweep_decide_title">Private key detected</string>
+    <string name="sweep_decide_text">Do you want to send to, or sweep from this key?</string>
+    <string name="sweep_sweep">Sweep</string>
+    <string name="sweep_send">Send</string>
+    <string name="sweep_activity_title">Sweep key</string>
+    <string name="sweep_hint">This function will \'sweep\' the private key you scanned.\nThis means
+        that the balance of this key will be transferred to your current default wallet address.\nKeep
+        in mind that you should NOT reuse the scanned key afterwards!\nNetwork fee will be calculated
+        automatically for you.</string>
+    <string name="sweep_amount">Key balance</string>
+    <string name="sweep_getbalance_title">Please wait</string>
+    <string name="sweep_getbalance_text">Requesting balance</string>
+    <string name="sweep_getbalance_failed">Unable to request the balance of this key.
+        Please make sure you have a good network connection and try again.</string>
+    <string name="sweep_unconfirmed">The key has an unconfirmed balance of %s DOGE and can therefore not be swept yet.
+        Please retry to sweep it again in about 5 minutes.</string>
+    <string name="sweep_zero">The key has a balance of 0 DOGE. If you have just sent coins to it,
+        please wait a few minutes and try again.</string>
 
 	<!-- generic buttons -->
 	<string name="button_ok">OK</string>

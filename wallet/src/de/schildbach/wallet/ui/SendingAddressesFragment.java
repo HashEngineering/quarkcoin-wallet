@@ -48,6 +48,7 @@ import com.google.bitcoin.core.Address;
 import com.google.bitcoin.core.AddressFormatException;
 import com.google.bitcoin.core.Transaction;
 import com.google.bitcoin.uri.BitcoinURI;
+import com.google.bitcoin.core.ECKey;
 
 import de.schildbach.wallet.AddressBookProvider;
 import de.schildbach.wallet.Constants;
@@ -153,6 +154,11 @@ public final class SendingAddressesFragment extends SherlockListFragment impleme
 				}
 
 				@Override
+                protected void handlePrivateKeyScan(final ECKey key) {
+                    cannotClassify(input);
+                }
+
+				@Override
 				protected void error(final int messageResId, final Object... messageArgs)
 				{
 					dialog(activity, null, R.string.address_book_options_scan_title, messageResId, messageArgs);
@@ -217,6 +223,11 @@ public final class SendingAddressesFragment extends SherlockListFragment impleme
 				{
 					cannotClassify(input);
 				}
+
+				@Override
+                protected void handlePrivateKeyScan(final ECKey key) {
+                    cannotClassify(input);
+                }
 
 				@Override
 				protected void error(final int messageResId, final Object... messageArgs)
@@ -293,6 +304,11 @@ public final class SendingAddressesFragment extends SherlockListFragment impleme
 
 						mode.finish();
 						return true;
+                    case R.id.sending_addresses_context_browse:
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.EXPLORE_BASE_URL + "address/info/"
+                                + getAddress(position).toString())));
+                        mode.finish();
+                        return true;
 				}
 
 				return false;

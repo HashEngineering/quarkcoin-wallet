@@ -502,6 +502,13 @@ public class WalletApplication extends Application
 		return false;
 	}
 
+	public void broadcastSweepTransaction(@Nonnull final Transaction tx)
+    {
+        final Intent intent = new Intent(BlockchainService.ACTION_BROADCAST_SWEEP_TRANSACTION, null, this, BlockchainServiceImpl.class);
+        intent.putExtra(BlockchainService.ACTION_BROADCAST_SWEEP_TRANSACTION_TX, tx);
+        startService(intent);
+    }
+
 	public PackageInfo packageInfo()
 	{
 		return packageInfo;

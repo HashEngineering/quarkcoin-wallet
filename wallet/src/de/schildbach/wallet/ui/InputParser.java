@@ -333,6 +333,8 @@ public abstract class InputParser
 
 	protected abstract void handleDirectTransaction(@Nonnull Transaction transaction);
 
+    protected abstract void handlePrivateKeyScan(@Nonnull ECKey key);
+
 	protected abstract void error(int messageResId, Object... messageArgs);
 
 	protected void cannotClassify(@Nonnull final String input)

@@ -19,6 +19,10 @@ package de.schildbach.wallet.ui;
 
 import javax.annotation.Nonnull;
 
+import android.content.DialogInterface;
+import com.google.bitcoin.core.ECKey;
+import de.schildbach.wallet.Constants;
+import de.schildbach.wallet.PaymentIntent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

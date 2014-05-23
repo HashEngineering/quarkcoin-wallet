@@ -20,7 +20,7 @@ package de.schildbach.wallet.service;
 import java.util.List;
 
 import javax.annotation.CheckForNull;
-
+import com.google.bitcoin.core.Transaction;
 import com.google.bitcoin.core.Peer;
 import com.google.bitcoin.core.StoredBlock;
 import hashengineering.quarkcoin.wallet.R;
@@ -47,9 +47,12 @@ public interface BlockchainService
 	public static final String ACTION_RESET_BLOCKCHAIN = R.class.getPackage().getName() + ".reset_blockchain";
 	public static final String ACTION_BROADCAST_TRANSACTION = R.class.getPackage().getName() + ".broadcast_transaction";
 	public static final String ACTION_BROADCAST_TRANSACTION_HASH = "hash";
+    public static final String ACTION_BROADCAST_SWEEP_TRANSACTION_TX = "sweep_tx";
 
 	@CheckForNull
 	List<Peer> getConnectedPeers();
 
 	List<StoredBlock> getRecentBlocks(int maxBlocks);
+
+    void broadcastSweepTransaction(@Nonnull Transaction tx);
 }

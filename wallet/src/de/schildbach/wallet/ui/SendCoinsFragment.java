@@ -71,9 +71,17 @@ import com.actionbarsherlock.view.ActionMode;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+import com.google.bitcoin.core.Address;
+import com.google.bitcoin.core.AddressFormatException;
+import com.google.bitcoin.core.NetworkParameters;
+import com.google.bitcoin.core.Sha256Hash;
+import com.google.bitcoin.core.Transaction;
+import com.google.bitcoin.core.TransactionConfidence;
 import com.google.bitcoin.core.TransactionConfidence.ConfidenceType;
+import com.google.bitcoin.Wallet;
 import com.google.bitcoin.core.Wallet.BalanceType;
 import com.google.bitcoin.core.Wallet.SendRequest;
+import com.google.bitcoin.core.ECKey;
 
 import de.schildbach.wallet.AddressBookProvider;
 import de.schildbach.wallet.Configuration;
@@ -81,6 +89,7 @@ import de.schildbach.wallet.Constants;
 import de.schildbach.wallet.ExchangeRatesProvider;
 import de.schildbach.wallet.ExchangeRatesProvider.ExchangeRate;
 import de.schildbach.wallet.PaymentIntent;
+import de.schildbach.wallet.PaymentIntent.Standard;
 import de.schildbach.wallet.WalletApplication;
 import de.schildbach.wallet.integration.android.BitcoinIntegration;
 import de.schildbach.wallet.offline.DirectPaymentTask;
@@ -648,6 +657,11 @@ public final class SendCoinsFragment extends SherlockFragment
 					}
 
 					@Override
+                    protected void handlePrivateKeyScan(final ECKey key) {
+                        updateStateFrom(PaymentIntent.fromAddress(key.toAddress(Constants.NETWORK_PARAMETERS), ""));
+                    }
+
+					@Override
 					protected void error(final int messageResId, final Object... messageArgs)
 					{
 						dialog(activity, null, R.string.button_scan, messageResId, messageArgs);
@@ -1174,6 +1188,11 @@ public final class SendCoinsFragment extends SherlockFragment
 			}
 
 			@Override
+            protected void handlePrivateKeyScan(final ECKey key) {
+                cannotClassify(input);
+            }
+
+			@Override
 			protected void error(final int messageResId, final Object... messageArgs)
 			{
 				dialog(activity, activityDismissListener, 0, messageResId, messageArgs);
@@ -1196,6 +1215,11 @@ public final class SendCoinsFragment extends SherlockFragment
 			{
 				throw new UnsupportedOperationException();
 			}
+
+			@Override
+            protected void handlePrivateKeyScan(final ECKey key) {
+                throw new UnsupportedOperationException(); // Never called
+            }
 
 			@Override
 			protected void error(final int messageResId, final Object... messageArgs)
@@ -1224,6 +1248,11 @@ public final class SendCoinsFragment extends SherlockFragment
 				{
 					throw new UnsupportedOperationException();
 				}
+
+				@Override
+                protected void handlePrivateKeyScan(final ECKey key) {
+                    throw new UnsupportedOperationException(); // Never called
+                }
 
 				@Override
 				protected void error(final int messageResId, final Object... messageArgs)
