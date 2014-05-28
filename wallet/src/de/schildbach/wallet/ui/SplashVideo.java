@@ -40,13 +40,15 @@ public class SplashVideo extends Activity implements OnCompletionListener, Media
         int r = display.getRotation();
 
         int videofile = 0;
+        int land = R.raw.all_2_landscape;
+        int port = R.raw.all_2_portrait;
         if(height > width)
         {
             videofile = (r == 1 || r == 3) ? R.raw.all_2_landscape : R.raw.all_2_portrait;
         }
         else
         {
-            videofile = (r == 1 || r == 3) ? R.raw.all_2_portrait : R.raw.all_2_landscape;
+            videofile = (r == 0 || r == 2) ? R.raw.all_2_portrait : R.raw.all_2_landscape;
         }
 
 
