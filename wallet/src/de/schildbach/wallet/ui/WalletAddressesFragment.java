@@ -92,7 +92,7 @@ public final class WalletAddressesFragment extends SherlockListFragment
 
 		setHasOptionsMenu(true);
 
-		adapter = new WalletAddressesAdapter(activity, wallet, true);
+		adapter = new WalletAddressesAdapter(activity, wallet);
 
 		final Address selectedAddress = application.determineSelectedAddress();
 		adapter.setSelectedAddress(selectedAddress.toString());
@@ -126,11 +126,11 @@ public final class WalletAddressesFragment extends SherlockListFragment
 	@Override
 	public void onCreateOptionsMenu(final Menu menu, final MenuInflater inflater)
 	{
+        //Fixed menu item doubling on rotate in address screen - langerhans (https://github.com/langerhans/dogecoin-wallet-new)
         if (menu.findItem(R.id.wallet_addresses_options_add) == null)
         {
             inflater.inflate(R.menu.wallet_addresses_fragment_options, menu);
-
-		    super.onCreateOptionsMenu(menu, inflater);
+            super.onCreateOptionsMenu(menu, inflater);
         }
 	}
 
@@ -222,7 +222,7 @@ public final class WalletAddressesFragment extends SherlockListFragment
 						return true;
 
 					case R.id.wallet_addresses_context_browse:
-						startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.EXPLORE_BASE_URL + "address/info/"
+						startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.EXPLORE_BASE_URL + Constants.EXPLORE_ADDRESS_PATH
 								+ getAddress(position).toString())));
 
 						mode.finish();

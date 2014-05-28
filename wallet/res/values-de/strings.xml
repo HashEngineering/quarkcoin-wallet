@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 
 <resources>
 
 	<string name="toast_wallet_reset">Wallet wurde zurückgesetzt,\nwird einige Zeit benötigen</string>
 
-	<string name="wallet_disclaimer_fragment_remind_safety">Nutzung auf eigene Gefahr. Lies die &lt;u>Sicherheitshinweise&lt;/u>.</string>
-	<string name="wallet_disclaimer_fragment_remind_backup">Bitte &lt;u>sichere deine Wallet&lt;/u>!</string>
+	<string name="wallet_disclaimer_fragment_remind_safety">Nutzung auf eigene Gefahr. Lies die &lt;u&gt;Sicherheitshinweise&lt;/u&gt;.</string>
+	<string name="wallet_disclaimer_fragment_remind_backup">Bitte &lt;u&gt;sichere deine Wallet&lt;/u&gt;!</string>
 	<string name="blockchain_state_progress_hours">%1$s, hinkt %2$d Stunden hinterher</string>
 	<string name="blockchain_state_progress_days">%1$s, hinkt %2$d Tage hinterher</string>
 	<string name="blockchain_state_progress_weeks">%1$s, hinkt %2$d Wochen hinterher</string>
@@ -26,19 +26,22 @@
 	<string name="exchange_rates_fragment_default">(Standard)</string>
 	<string name="exchange_rates_fragment_rate">Kurs</string>
 	<string name="exchange_rates_fragment_balance">Guthaben</string>
-	<string name="exchange_rates_fragment_source">Kurs von %s abgerufen</string>
+	<string name="exchange_rates_fragment_source">Kurs von %s</string>
 	<string name="exchange_rates_context_set_as_default_title">Als Standard-Fremdwährung setzen</string>
 	<string name="wallet_transactions_fragment_tab_received">Empfangen</string>
 	<string name="wallet_transactions_fragment_tab_all">Alle</string>
 	<string name="wallet_transactions_fragment_tab_sent">Gesendet</string>
+
 	<string name="wallet_transactions_fragment_empty_text_received">Noch keine Quarks empfangen.</string>
 	<string name="wallet_transactions_fragment_empty_text_sent">Noch keine Quarks gesendet.</string>
 	<string name="wallet_transactions_fragment_empty_text_howto">Wie komme ich an Quarks?\n\nHandle gegen traditionelles Geld,\nverkaufe Güter oder Dienstleistungen oder\nverdiene durch Arbeit.</string>
-	<string name="wallet_transactions_row_warning_backup">Gratulation, du hast deine erste Zahlung erhalten! Hast du deine Wallet bereits &lt;u>gesichert&lt;/u>, um dich gegen Verlust zu schützen?</string>
+	<string name="wallet_transactions_row_warning_backup">Gratulation, du hast deine erste Zahlung erhalten! Hast du deine Wallet bereits &lt;u&gt;gesichert&lt;/u&gt;, um dich gegen Verlust zu schützen?</string>
+
 	<string name="wallet_transactions_fragment_coinbase">geschürft</string>
 	<string name="wallet_transactions_fragment_internal">intern</string>
 	<string name="wallet_transactions_context_show_qr_title">QR-Code zeigen</string>
 	<string name="wallet_options_backup">Schlüsselsicherung</string>
+    <string name="wallet_options_disconnect">Verbindungen trennen</string>
 	<string name="wallet_options_safety">Sicherheit</string>
 	<string name="wallet_options_donate">Spenden</string>
 	<string name="wallet_donate_address_label">Spende für Quark Wallet</string>
@@ -52,14 +55,17 @@
 		oder empfangen.\n\nDu solltest Deine Zeit- und Zeitzoneneinstellungen überprüfen und korrigieren.</string>
 	<string name="wallet_version_dialog_title">Eine neue Version ist verfügbar!</string>
 	<string name="wallet_version_dialog_msg">Diese Version behebt wichtige Fehler. Die Einzelheiten stehen in der Liste der Änderungen auf Google Play.</string>
+	<string name="wallet_version_dialog_msg_deprecated">Wenn du kein Update siehst, heißt das vermutlich daß deine Android-Version nicht mehr unterstützt wird.</string>
 	<string name="wallet_version_dialog_button_market">Google Play</string>
 	<string name="wallet_version_dialog_button_binary">Herunterladen</string>
-	<string name="wallet_precision_warning_dialog_title">Änderung der Stückelung</string>
-	<string name="wallet_precision_warning_dialog_msg">Die Stückelung wurde von Quark (QRK) auf MilliQuark (mQRK) geändert. Alle Werte sind mit dem Faktor 1000 multipliziert.\n\nDiese Änderung kannst Du in den Einstellungen rückgängig machen.</string>
 	<string name="wallet_old_sdk_dialog_title">Android ist veraltet</string>
 	<string name="wallet_old_sdk_dialog_message">Es ist möglich, daß eine der nächsten Versionen von Quark Wallet dein Gerät nicht mehr unterstützt. In manchen Fällen kann es schwierig werden, Zahlungen zu tätigen.\n\nEs wird empfohlen, die enthaltenen Quarks bald zu verschieben, außer du weisst was du tust.</string>
 
 	<string name="send_coins_activity_title">Quarks senden</string>
+	<string name="send_coins_activity_title">Quarks senden</string>
+	<string name="send_coins_fragment_request_payment_request_progress">Rufe Signatur von %s ab…</string>
+	<string name="send_coins_fragment_request_payment_request_failed_title">Abrufen der Signatur fehlgeschlagen</string>
+	<string name="send_coins_fragment_request_payment_request_wrong_signature">Falsche Signatur!</string>
 	<string name="send_coins_fragment_payee_verified_by">verifiziert durch: %s</string>
 	<string name="send_coins_fragment_payee_verified_by_unknown">unbekannt</string>
 
@@ -83,7 +89,7 @@
 	<string name="send_coins_fragment_button_back">Zurück</string>
 	<string name="send_coins_fragment_insufficient_money_title">Nicht genug verfügbare Quarks</string>
 	<string name="send_coins_fragment_insufficient_money_msg1">Dir fehlen %s.</string>
-	<string name="send_coins_fragment_insufficient_money_msg2">Möchtest Du alles zahlen was Du hast?</string>
+	<string name="send_coins_fragment_insufficient_money_msg2">Möchtest Du mit allem zahlen was Du hast?</string>
 	<string name="send_coins_preparation_msg">Signierung…</string>
 	<string name="send_coins_sending_msg">Versenden…</string>
 	<string name="send_coins_sent_msg">Versendet!</string>
@@ -94,11 +100,9 @@
 
 	<string name="request_coins_activity_title">Quarks anfordern</string>
 	<string name="request_coins_fragment_amount_label">Angeforderter Betrag (optional)</string>
-	<string name="request_coins_fragment_address_label">Anfordernde Adresse</string>
-	<string name="request_coins_fragment_include_address_label">Name der Adresse beifügen</string>
+	<string name="request_coins_fragment_accept_bluetooth_payment">Zahlung zur zuverlässigeren Abwicklung per Bluetooth akzeptieren</string>
 	<string name="request_coins_fragment_initiate_request_qr">Laß diesen Code vom Sender scannen.</string>
 	<string name="request_coins_fragment_initiate_request_nfc">Oder berühr\'s mit einem NFC-fähigen Gerät.</string>
-	<string name="request_coins_fragment_bluetooth_enabled">Zahlungen via Bluetooth aktiviert.</string>
 	<string name="request_coins_clipboard_msg">Anforderung aufs Clipboard kopiert</string>
 	<string name="request_coins_share_dialog_title">Anforderung veröffentlichen…</string>
 	<string name="request_coins_options_local_app_title">Von lokaler App anfordern</string>
@@ -128,7 +132,7 @@
 	<string name="edit_address_book_entry_dialog_label_label">Name</string>
 	<string name="edit_address_book_entry_dialog_button_edit">Speichern</string>
 
-	<string name="transaction_row_message_purpose_key_rotation">Diese Transaktion stärkt deine Wallet gegen Diebstahl. &lt;u>Mehr Information.&lt;/u></string>
+	<string name="transaction_row_message_purpose_key_rotation">Diese Transaktion stärkt deine Wallet gegen Diebstahl. &lt;u&gt;Mehr Information.&lt;/u&gt;</string>
 	<string name="transaction_row_message_own_unbroadcasted">Diese Zahlung ist noch nicht übertragen.</string>
 	<string name="transaction_row_message_received_direct">Diese Zahlung wurde direkt empfangen. Es besteht das Risiko, daß sie niemals verfügbar wird.</string>
 	<string name="transaction_row_message_received_unconfirmed_unlocked">Diese Zahlung sollte in ein paar Minuten verfügbar werden.</string>
@@ -145,6 +149,7 @@
 
 	<string name="import_keys_dialog_title">Private Schlüssel wiederherstellen</string>
 	<string name="import_keys_dialog_message">Wähle eine Sicherungsdatei mit privaten Schlüsseln vom externen oder app-privaten Speicher aus:</string>
+	<string name="import_keys_dialog_warning">Wichtig: Lade keine privaten Schlüssel aus dubiosen Quellen! Andere Personen können die Kontrolle über deine Bitcoins bekommen, wenn du das tust.</string>
 	<string name="import_keys_dialog_file_security_encrypted">mit Passwort verschlüsselt</string>
 	<string name="import_keys_dialog_file_security_unencrypted">unverschlüsselt</string>
 	<string name="import_keys_dialog_file_security_external">externer Speicher</string>
@@ -178,6 +183,7 @@
 	<string name="input_parser_io_error">Kann Daten nicht lesen:\n%s</string>
 	<string name="input_parser_invalid_bitcoin_uri">Ungültige Quark-URI:\n%s</string>
 	<string name="input_parser_invalid_address">Ungültige Quark-Adresse gelesen!\n(Versuchst Du Mainnet/Testnet zu mischen?)</string>
+	<string name="input_parser_unverifyable_paymentrequest">Kann Zahlungsanforderung nicht verifizieren:\n%s</string>
 	<string name="input_parser_invalid_paymentrequest">Ungültige Zahlungsanforderung:\n%s</string>
 	<string name="input_parser_invalid_transaction">Ungültige Transaktion:\n%s</string>
 
@@ -204,7 +210,7 @@
 
 	<string name="report_issue_dialog_title_issue">Problem melden</string>
 	<string name="report_issue_dialog_title_crash">Absturz erkannt</string>
-	<string name="report_issue_dialog_message_issue">Bitte beschreibe dein Problem genau genug, daß ein Entwickler das Problem nachvollziehen kann.</string>
+	<string name="report_issue_dialog_message_issue">Bitte beschreibe dein Problem genau, so daß es nachvollzogen werden kann. Hänge den Dump der Wallet an, falls das Problem speziell deine Wallet betrifft.</string>
 	<string name="report_issue_dialog_message_crash">Möchtest du einen Fehlerbericht senden, um bei der Fehlerbehebung zu helfen?</string>
 	<string name="report_issue_dialog_description">Problembeschreibung</string>
 	<string name="report_issue_dialog_report">Senden</string>
@@ -217,9 +223,11 @@
 
 	<string name="about_title">Über</string>
 	<string name="about_license_title">Lizenz</string>
-	<string name="about_credits_bitcoinj_title">Diese App nutzt Quarkj %s</string>
+	<string name="about_credits_bitcoinj_title">Diese App nutzt quarkcoinj %s</string>
+
 	<string name="about_credits_zxing_title">"Diese App nutzt 'zxing'"</string>
 	<string name="about_credits_icon_title">"Diese App nutzt ein Icon von 'bitboy'"</string>
+
 	<string name="about_community_googleplus_title">Google+ Community</string>
 	<string name="about_community_googleplus_summary">Diskussionen über die App</string>
 	<string name="about_author_twitter_title">Autor bei Twitter</string>
@@ -255,5 +263,10 @@
 
 	<string name="time_today">heute</string>
 	<string name="address_unlabeled">(unbenannt)</string>
+
+	<!-- generic error messages -->
+	<string name="error_io">I/O-Fehler: %s</string>
+	<string name="error_http">HTTP-Fehler %1$s:\n%2$s</string>
+	<string name="error_bluetooth">Bluetooth-Fehler %1$s</string>
 
 </resources>

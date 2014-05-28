@@ -20,10 +20,11 @@ package de.schildbach.wallet.service;
 import java.util.List;
 
 import javax.annotation.CheckForNull;
+import javax.annotation.Nonnull;
+
 import com.google.bitcoin.core.Transaction;
 import com.google.bitcoin.core.Peer;
 import com.google.bitcoin.core.StoredBlock;
-import hashengineering.quarkcoin.wallet.R;
 
 
 /**
@@ -31,10 +32,10 @@ import hashengineering.quarkcoin.wallet.R;
  */
 public interface BlockchainService
 {
-	public static final String ACTION_PEER_STATE = R.class.getPackage().getName() + ".peer_state";
+	public static final String ACTION_PEER_STATE = BlockchainService.class.getPackage().getName() + ".peer_state";
 	public static final String ACTION_PEER_STATE_NUM_PEERS = "num_peers";
 
-	public static final String ACTION_BLOCKCHAIN_STATE = R.class.getPackage().getName() + ".blockchain_state";
+	public static final String ACTION_BLOCKCHAIN_STATE = BlockchainService.class.getPackage().getName() + ".blockchain_state";
 	public static final String ACTION_BLOCKCHAIN_STATE_BEST_CHAIN_DATE = "best_chain_date";
 	public static final String ACTION_BLOCKCHAIN_STATE_BEST_CHAIN_HEIGHT = "best_chain_height";
 	public static final String ACTION_BLOCKCHAIN_STATE_REPLAYING = "replaying";
@@ -43,9 +44,9 @@ public interface BlockchainService
 	public static final int ACTION_BLOCKCHAIN_STATE_DOWNLOAD_STORAGE_PROBLEM = 1;
 	public static final int ACTION_BLOCKCHAIN_STATE_DOWNLOAD_NETWORK_PROBLEM = 2;
 
-	public static final String ACTION_CANCEL_COINS_RECEIVED = R.class.getPackage().getName() + ".cancel_coins_received";
-	public static final String ACTION_RESET_BLOCKCHAIN = R.class.getPackage().getName() + ".reset_blockchain";
-	public static final String ACTION_BROADCAST_TRANSACTION = R.class.getPackage().getName() + ".broadcast_transaction";
+	public static final String ACTION_CANCEL_COINS_RECEIVED = BlockchainService.class.getPackage().getName() + ".cancel_coins_received";
+	public static final String ACTION_RESET_BLOCKCHAIN = BlockchainService.class.getPackage().getName() + ".reset_blockchain";
+	public static final String ACTION_BROADCAST_TRANSACTION = BlockchainService.class.getPackage().getName() + ".broadcast_transaction";
 	public static final String ACTION_BROADCAST_TRANSACTION_HASH = "hash";
     public static final String ACTION_BROADCAST_SWEEP_TRANSACTION_TX = "sweep_tx";
 

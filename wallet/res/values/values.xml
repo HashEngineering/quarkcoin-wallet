@@ -7,6 +7,7 @@
 	<string name="app_name">Quark (beta)</string>
 
 
+
 	<string-array name="preferences_precision_values">
 		<item>5</item>
 		<item>4</item>

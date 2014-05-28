@@ -5,14 +5,29 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>integration-android</artifactId>
+<<<<<<< HEAD
 	<version>1.0</version>
 	<name>quarkcoin Integration for Android</name>
+=======
+
+	<version>2.0</version>
+	<name>digitalcoin Integration for Android</name>
+>>>>>>> c573e21beebb18c96ab408758f94902f7eb6db6a
+
 
 	<parent>
 		<groupId>de.schildbach.wallet</groupId>
 		<artifactId>base</artifactId>
 		<version>1</version>
 	</parent>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
 	<dependencies>
 

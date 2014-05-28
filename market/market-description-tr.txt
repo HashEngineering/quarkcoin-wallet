@@ -14,7 +14,7 @@ Quark hakkında daha fazla bilgi için şu siteyi ziyaret edebilirsiniz:
 http://www.qrk.cc/
 
 Quark Wallet uygulamasına katkıda bulunmak istiyorsanız proje sayfasını ziyaret ediniz:
-https://github.com/HashEngineering/Quark-wallet
+https://github.com/HashEngineering/quarkcoin-wallet
 
 Lisans: GPLv3
 Tüm riski siz üstlenmiş olursunuz.

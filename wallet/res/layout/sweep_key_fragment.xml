@@ -35,7 +35,7 @@
         android:orientation="horizontal"
         android:showDividers="middle" >
 
-        <de.langerhans.wallet.ui.CurrencyAmountView
+        <de.schildbach.wallet.ui.CurrencyAmountView
             android:id="@+id/sweep_balance_doge"
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -49,9 +49,9 @@
                 android:textSize="@dimen/font_size_large"
                 android:enabled="false"
                 tools:ignore="TextFields"/>
-        </de.langerhans.wallet.ui.CurrencyAmountView>
+        </de.schildbach.wallet.ui.CurrencyAmountView>
 
-        <de.langerhans.wallet.ui.CurrencyAmountView
+        <de.schildbach.wallet.ui.CurrencyAmountView
             android:id="@+id/sweep_balnce_fiat"
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 android:textSize="@dimen/font_size_large"
                 android:enabled="false"
                 tools:ignore="TextFields" />
-        </de.langerhans.wallet.ui.CurrencyAmountView>
+        </de.schildbach.wallet.ui.CurrencyAmountView>
     </LinearLayout>
 
     <TextView

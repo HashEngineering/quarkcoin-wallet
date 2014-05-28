@@ -22,6 +22,9 @@ import java.util.concurrent.RejectedExecutionException;
 
 import javax.annotation.Nonnull;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
 
@@ -40,7 +43,8 @@ import org.slf4j.LoggerFactory;
 public final class WalletBalanceLoader extends AsyncTaskLoader<BigInteger>
 {
 	private final Wallet wallet;
-    private static final Logger log = LoggerFactory.getLogger(TransactionsListFragment.class);
+
+	private static final Logger log = LoggerFactory.getLogger(WalletBalanceLoader.class);
 
 	public WalletBalanceLoader(final Context context, @Nonnull final Wallet wallet)
 	{
@@ -86,15 +90,15 @@ public final class WalletBalanceLoader extends AsyncTaskLoader<BigInteger>
 		@Override
 		public void onThrottledWalletChanged()
 		{
-            try
-            {
-                forceLoad();
-            }
-            catch (final RejectedExecutionException x)
-            {
-                //exception handling taken from langerhans (dogecoin-wallet) 3/29/2014
-                log.info("rejected execution: " + WalletBalanceLoader.this.toString());
-            }
+			try
+			{
+				forceLoad();
+			}
+			catch (final RejectedExecutionException x)
+			{
+				log.info("rejected execution: " + WalletBalanceLoader.this.toString());
+			}
+
 		}
 	};
 }

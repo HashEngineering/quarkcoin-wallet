@@ -91,14 +91,6 @@ public final class SendingAddressesFragment extends SherlockListFragment impleme
 		super.onCreate(savedInstanceState);
 
 		setHasOptionsMenu(true);
-	}
-
-	@Override
-	public void onActivityCreated(final Bundle savedInstanceState)
-	{
-		super.onActivityCreated(savedInstanceState);
-
-		setEmptyText(getString(R.string.address_book_empty_text));
 
 		adapter = new SimpleCursorAdapter(activity, R.layout.address_book_row, null, new String[] { AddressBookProvider.KEY_LABEL,
 				AddressBookProvider.KEY_ADDRESS }, new int[] { R.id.address_book_row_label, R.id.address_book_row_address }, 0);
@@ -119,6 +111,22 @@ public final class SendingAddressesFragment extends SherlockListFragment impleme
 		setListAdapter(adapter);
 
 		loaderManager.initLoader(0, null, this);
+	}
+
+	@Override
+	public void onViewCreated(View view, Bundle savedInstanceState)
+	{
+		super.onViewCreated(view, savedInstanceState);
+
+		setEmptyText(getString(R.string.address_book_empty_text));
+	}
+
+	@Override
+	public void onDestroy()
+	{
+		loaderManager.destroyLoader(0);
+
+		super.onDestroy();
 	}
 
 	@Override
@@ -170,10 +178,10 @@ public final class SendingAddressesFragment extends SherlockListFragment impleme
 	@Override
 	public void onCreateOptionsMenu(final Menu menu, final MenuInflater inflater)
 	{
+        //Fixed menu item doubling on rotate in address screen - langerhans (https://github.com/langerhans/dogecoin-wallet-new)
         if (menu.findItem(R.id.sending_addresses_options_paste) == null && menu.findItem(R.id.sending_addresses_options_scan) == null)
         {
             inflater.inflate(R.menu.sending_addresses_fragment_options, menu);
-
 
 		    final PackageManager pm = activity.getPackageManager();
 		    menu.findItem(R.id.sending_addresses_options_scan).setVisible(
@@ -305,7 +313,7 @@ public final class SendingAddressesFragment extends SherlockListFragment impleme
 						mode.finish();
 						return true;
                     case R.id.sending_addresses_context_browse:
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.EXPLORE_BASE_URL + "address/info/"
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.EXPLORE_BASE_URL + Constants.EXPLORE_ADDRESS_PATH
                                 + getAddress(position).toString())));
                         mode.finish();
                         return true;

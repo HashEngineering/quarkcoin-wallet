@@ -2,8 +2,8 @@
 <resources>
 
 	<string name="toast_wallet_reset">A tárca alapállapotba került,\na visszaállítás némi időt vesz igénybe.</string>
-	<string name="wallet_disclaimer_fragment_remind_safety">Csak saját felelősségre használd. Olvasd el a &lt;u>biztonsági megjegyzéseket&lt;/u>.</string>
-	<string name="wallet_disclaimer_fragment_remind_backup">Kérjük &lt;u>mentsd el a tárcád&lt;/u>!</string>
+	<string name="wallet_disclaimer_fragment_remind_safety">Csak saját felelősségre használd. Olvasd el a &lt;u&gt;biztonsági megjegyzéseket&lt;/u&gt;.</string>
+	<string name="wallet_disclaimer_fragment_remind_backup">Kérjük &lt;u&gt;mentsd el a tárcád&lt;/u&gt;!</string>
 	<string name="blockchain_state_progress_hours">%1$s, %2$d óra van még hátra</string>
 	<string name="blockchain_state_progress_days">%1$s, %2$d nap van még hátra</string>
 	<string name="blockchain_state_progress_weeks">%1$s, %2$d hét van még hátra</string>
@@ -27,12 +27,10 @@
 	<string name="wallet_transactions_fragment_tab_received">Fogadott</string>
 	<string name="wallet_transactions_fragment_tab_all">Mindkettő</string>
 	<string name="wallet_transactions_fragment_tab_sent">Küldött</string>
-
 	<string name="wallet_transactions_fragment_empty_text_received">Nem érkezett Quark eddig.</string>
-	<string name="wallet_transactions_fragment_empty_text_sent">Quark küldés nem történt eddig.</string>
+	<string name="wallet_transactions_fragment_empty_text_sent">Bitcoin küldés nem történt eddig.</string>
 	<string name="wallet_transactions_fragment_empty_text_howto">Hogy szerezz Quark-t?\n\nVásárolj hagyományos pénzért,\nárusíts termékeket, kínálj szolgáltatásokat vagy\nkeress munkával.</string>
-	<string name="wallet_transactions_row_warning_backup">Gratulálunk, megérkezett az első kifizetésed! Ugye rendszeresen &lt;u>elmented a tárcád&lt;/u>, tartalmát, hogy biztonságban legyen?</string>
-
+	<string name="wallet_transactions_row_warning_backup">Gratulálunk, megérkezett az első kifizetésed! Ugye rendszeresen &lt;u&gt;elmented a tárcád&lt;/u&gt;, tartalmát, hogy biztonságban legyen?</string>
 	<string name="wallet_transactions_fragment_coinbase">bányászott</string>
 	<string name="wallet_transactions_fragment_internal">belső</string>
 	<string name="wallet_transactions_context_show_qr_title">QR-kód megtekintése</string>
@@ -70,14 +68,13 @@
 	<string name="send_coins_error_msg">Probléma merült fel a küldés során!</string>
 	<string name="send_coins_options_empty">Üres tárca</string>
 	<string name="send_coins_address_context_clear_title">Adj meg egy új címet</string>
+
 	<string name="request_coins_activity_title">Quark kérés</string>
-	<string name="request_coins_fragment_address_label">Az igényléshez megadott cím</string>
-	<string name="request_coins_fragment_include_address_label">adj címkét a címhez</string>
 	<string name="request_coins_fragment_amount_label">Igényelt összeg (opcionális)</string>
 	<string name="request_coins_fragment_initiate_request_qr">A kód a küldő által beolvasva.</string>
 	<string name="request_coins_fragment_initiate_request_nfc">Vagy válaszd ki az NFC-képes eszközt.</string>
-	<string name="request_coins_fragment_bluetooth_enabled">Kifizetések fogadása Bluetooth segítségével.</string>
 	<string name="request_coins_clipboard_msg">Quark igény a vágólapra másolva</string>
+
 	<string name="request_coins_share_dialog_title">Igénylések megosztása…</string>
 	<string name="request_coins_options_local_app_title">Igénylés a helyi app-ból</string>
 	<string name="address_book_activity_title">Címjegyzék</string>
@@ -99,7 +96,7 @@
 	<string name="edit_address_book_entry_dialog_address_label">Cím</string>
 	<string name="edit_address_book_entry_dialog_label_label">Név</string>
 	<string name="edit_address_book_entry_dialog_button_edit">Mentés</string>
-	<string name="transaction_row_message_purpose_key_rotation">A művelet megerősíti a tárcád védelmét a lopások ellen. &lt;u>Bővebb információ&lt;/u></string>
+	<string name="transaction_row_message_purpose_key_rotation">A művelet megerősíti a tárcád védelmét a lopások ellen. &lt;u&gt;Bővebb információ&lt;/u&gt;</string>
 	<string name="transaction_row_message_own_unbroadcasted">Ez a kifizetés még nem került elküldésre.</string>
 	<string name="transaction_row_message_received_unconfirmed_unlocked">Ez a kifizetés perceken belül hozzáférhetővé válik.</string>
 	<string name="transaction_row_message_received_unconfirmed_locked">Ez nem egy hagyományos fizetés, nem megbízható.</string>
@@ -209,5 +206,5 @@
 	<string name="button_settings">Beállítások</string>
 	<string name="time_today">ma</string>
 	<string name="address_unlabeled">(címke nélkül)</string>
-
+    <string name="wallet_options_disconnect">Szétkapcsolva</string>
 </resources>

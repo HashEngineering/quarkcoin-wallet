@@ -9,7 +9,7 @@ CARACTERÍSTICAS:
 • Catálogo para guardar os endereços mais utilizados.
 • Quando você estiver off-line, você ainda pode pagar via Bluetooth.
 • Notificações do sistema para moedas recebidas.
-• Widget para saldo de Bitcoins.
+• Widget para saldo de digitalcoins.
 
 Mais informações sobre Quark em
 http://www.qrk.cc/

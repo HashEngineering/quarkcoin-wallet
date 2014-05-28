@@ -78,7 +78,8 @@ public class SweepKeyFragment extends SherlockFragment {
 
     //chain urls
     private List<String> blockchainUrls = Arrays.asList(
-            "https://qrk.blockr.io/unspent/%s"
+            "http://qrk.blockr.io/api/v1/address/unspent/%s",
+            "http://qrk.blockr.io/api/v1/address/unspent/%s" //need an alternate
             //"https://chain.so/api/v2/lite/unspent/%s"
     );
 
@@ -112,6 +113,7 @@ public class SweepKeyFragment extends SherlockFragment {
         final CurrencyAmountView fiatAmountView = (CurrencyAmountView) view.findViewById(R.id.sweep_balnce_fiat);
         fiatAmountView.setInputPrecision(Constants.LOCAL_PRECISION);
         fiatAmountView.setHintPrecision(Constants.LOCAL_PRECISION);
+        fiatAmountView.setReportBTC(true);
         amountCalculatorLink = new CurrencyCalculatorLink(dogeAmountView, fiatAmountView);
         amountCalculatorLink.setExchangeDirection(config.getLastExchangeDirection());
 
@@ -581,7 +583,7 @@ public class SweepKeyFragment extends SherlockFragment {
 
                     // pass JSON content to the parser and accept it's
                     // result output as ours
-                    result = parseUnspentJSON(content.toString());
+                    result = parseUnspentJSON_blockr(content.toString());
                 }
                 else
                 {
@@ -609,17 +611,19 @@ public class SweepKeyFragment extends SherlockFragment {
             return result;
         }
 
-        private Integer parseUnspentJSON (String doc) {
+        private Integer parseUnspentJSON_blockr (String doc) {
             try
             {
                 final JSONObject json = new JSONObject(doc);
 
                 // json should validate itself, otherwise we do not trust it.
-                Integer success = json.getInt("success");
-                if (success != 1)
+                String success = json.getString("status");
+
+                if (!success.equals(success))
                     return -1;
 
-                JSONArray unspentJson = json.getJSONArray("unspent_outputs");
+                JSONObject dataJson = json.getJSONObject("data");
+                JSONArray unspentJson = dataJson.getJSONArray("unspent");
 
                 // if there are no unspent outputs, balance is 0
                 // and we have nothing to sweep
@@ -630,10 +634,10 @@ public class SweepKeyFragment extends SherlockFragment {
                 {
                     JSONObject output = unspentJson.getJSONObject(i);
                     UnspentOutput out = new UnspentOutput(
-                            output.getString("tx_hash"),
-                            output.getInt("tx_output_n"),
+                            output.getString("tx"),
+                            output.getInt("n"),
                             output.getString("script"),
-                            new BigInteger(output.getString("value")),
+                            BigInteger.valueOf((long)(Double.parseDouble(String.format("%.05f", output.getDouble("amount")).replace(",", "."))) *100000),
                             output.getInt("confirmations")
                     );
                     unspentOutputs.add(out);
@@ -647,6 +651,44 @@ public class SweepKeyFragment extends SherlockFragment {
             return 1;
         }
     }
+    private Integer parseUnspentJSON_abe (String doc) {
+        try
+        {
+            final JSONObject json = new JSONObject(doc);
+
+            // json should validate itself, otherwise we do not trust it.
+            Integer success = json.getInt("success");
+            if (success != 1)
+                return -1;
+
+            JSONArray unspentJson = json.getJSONArray("unspent_outputs");
+
+            // if there are no unspent outputs, balance is 0
+            // and we have nothing to sweep
+            if(unspentJson.length() <= 0)
+                return 0;
+
+            for (int i = 0 ; i < unspentJson.length(); i++)
+            {
+                JSONObject output = unspentJson.getJSONObject(i);
+                UnspentOutput out = new UnspentOutput(
+                        output.getString("tx_hash"),
+                        output.getInt("tx_output_n"),
+                        output.getString("script"),
+                        new BigInteger(output.getString("value")),
+                        output.getInt("confirmations")
+                );
+                unspentOutputs.add(out);
+            }
+        } catch (JSONException e)
+        {
+            log.debug("Error while reading the JSON response");
+            return -1;
+        }
+
+        return 1;
+    }
+
 
     private class SignAndSendTransactionTask extends AsyncTask<ArrayList<Script>, Void, Void>
     {

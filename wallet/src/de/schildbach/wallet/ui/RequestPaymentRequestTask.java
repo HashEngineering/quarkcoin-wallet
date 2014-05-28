@@ -27,10 +27,8 @@ import javax.annotation.CheckForNull;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
+
 import com.google.bitcoin.core.ECKey;
-import com.google.bitcoin.protocols.payments.PaymentProtocol;
-import com.google.protobuf.CodedInputStream;
-import de.schildbach.wallet.ui.InputParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,13 +39,15 @@ import android.os.Handler;
 import android.os.Looper;
 
 import com.google.bitcoin.core.Transaction;
+import com.google.protobuf.CodedInputStream;
+
 import com.google.protobuf.CodedOutputStream;
 
 import de.schildbach.wallet.Constants;
 import de.schildbach.wallet.PaymentIntent;
 import de.schildbach.wallet.util.Bluetooth;
-import de.schildbach.wallet.offline.DirectPaymentTask;
 import hashengineering.quarkcoin.wallet.R;
+import de.schildbach.wallet.util.PaymentProtocol;
 
 /**
  * @author Andreas Schildbach
@@ -112,7 +112,9 @@ public abstract class RequestPaymentRequestTask
 						connection.setDoOutput(false);
 
 						connection.setRequestMethod("GET");
-						connection.setRequestProperty("Accept", com.google.bitcoin.protocols.payments.PaymentProtocol.MIMETYPE_PAYMENTREQUEST);
+
+						connection.setRequestProperty("Accept", PaymentProtocol.MIMETYPE_PAYMENTREQUEST);
+
 						if (userAgent != null)
 							connection.addRequestProperty("User-Agent", userAgent);
 						connection.connect();
@@ -143,6 +145,7 @@ public abstract class RequestPaymentRequestTask
                                 protected void handlePrivateKeyScan(final ECKey key) {
                                     throw new UnsupportedOperationException(); // Never called
                                 }
+
 
 								@Override
 								protected void error(final int messageResId, final Object... messageArgs)

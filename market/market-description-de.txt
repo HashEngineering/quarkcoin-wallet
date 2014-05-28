@@ -2,6 +2,7 @@ Hab deine Quarks immer dabei, in deiner Hosentasche! Du zahlst, indem du rasch e
 
 FEATURES:
 
+
 • Keine Registrierung, Web-Dienst oder Cloud nötig! Diese Wallet ist de-zentral und Peer to Peer.
 • Anzeige von Bitcoin-Werten in QRK und mQRK.
 • Umrechnung von und zu den nationalen Währungen.

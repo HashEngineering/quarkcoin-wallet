@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
 	<string name="toast_wallet_reset">Ví tiền đã được thiết lập lại,\nsẽ tốn chút ít thời gian để hồi phục lại</string>
@@ -64,9 +64,9 @@
 	<string name="send_coins_failed_msg">Thất bại!</string>
 	<string name="send_coins_error_msg">Xảy ra vấn đề khi gửi coin!</string>
 	<string name="send_coins_address_context_clear_title">Điền vào giá trị mới</string>
+
 	<string name="request_coins_activity_title">Yêu cầu Quark</string>
-	<string name="request_coins_fragment_address_label">Địa chỉ để yêu cầu đến</string>
-	<string name="request_coins_fragment_include_address_label">bao gồm nhãn cùng địa chỉ</string>
+
 	<string name="request_coins_fragment_amount_label">Số lượng đã yêu cầu (tùy chọn)</string>
 	<string name="request_coins_fragment_initiate_request_qr">Đã nhận được mã này được quét từ người gửi.</string>
 	<string name="request_coins_fragment_initiate_request_nfc">Hoặc chạm vào phần NFC để bật thiết bị.</string>
@@ -170,7 +170,6 @@
 	<string name="about_credits_market_publisher_title">Các tác giả khác</string>
     <string name="notification_coins_received_msg">đã nhận %s</string>
 	<string name="notification_peers_connected_msg">%d mạng ngang hàng đã kết nối</string>
-
 	<!-- generic buttons -->
 	<string name="button_ok">Đồng ý</string>
 	<string name="button_dismiss">Bỏ qua</string>
@@ -190,5 +189,5 @@
 	<string name="button_settings">Thiết lập</string>
 	<string name="time_today">hôm nay</string>
 	<string name="address_unlabeled">(chưa có nhãn)</string>
-
+    <string name="wallet_options_disconnect">Ngắt kết nối</string>
 </resources>

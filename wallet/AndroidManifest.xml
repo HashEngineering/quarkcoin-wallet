@@ -2,12 +2,12 @@
 <!-- Need to update this for the coin -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
-
 	package="hashengineering.quarkcoin.wallet"
 
 	android:installLocation="internalOnly"
 	android:versionCode="10113"
 	android:versionName="0.1.13" >
+
 
 
 	<uses-sdk
@@ -121,6 +121,7 @@
 
 				<data android:scheme="quark" />
 
+
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 			</intent-filter>
@@ -129,19 +130,24 @@
 
 				<data android:scheme="quark" />
 
+
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 			<intent-filter android:label="@string/send_coins_activity_title">
 				<action android:name="android.intent.action.VIEW" />
 
+
 				<data android:mimeType="application/quark-paymentrequest" />
+
 
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 			<intent-filter android:label="@string/send_coins_activity_title" >
 				<action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
+
 				<data android:mimeType="application/quark-paymentrequest" />
+
 
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
@@ -157,6 +163,20 @@
 			android:label="@string/request_coins_activity_title"
 			android:screenOrientation="behind"
 			android:windowSoftInputMode="adjustResize" />
+		<activity
+                android:name="de.schildbach.wallet.ui.TransactionActivity"
+                android:configChanges="keyboard|keyboardHidden"
+                android:label="@string/transaction_activity_title"
+                android:screenOrientation="behind" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="ltctx" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
 		<activity
 			android:name="de.schildbach.wallet.ui.AddressBookActivity"
 			android:configChanges="keyboard|keyboardHidden"
@@ -194,6 +214,7 @@
 				<category android:name="android.intent.category.DEFAULT" />
 
 				<data android:mimeType="x-quarkcoin/private-keys" />
+
 				<data android:mimeType="application/octet-stream" />
 			</intent-filter>
 		</activity>

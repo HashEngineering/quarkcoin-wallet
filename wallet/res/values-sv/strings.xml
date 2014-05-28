@@ -2,7 +2,7 @@
 <resources>
 
 	<string name="toast_wallet_reset">Plånboken nollställdes,\ndet kan ta ett tag innan den återställts</string>
-	<string name="wallet_disclaimer_fragment_remind_safety">Använd på egen risk. Läs &lt;u>säkerhetsråden&lt;/u>.</string>
+	<string name="wallet_disclaimer_fragment_remind_safety">Använd på egen risk. Läs &lt;u&gt;säkerhetsråden&lt;/u&gt;.</string>
 	<string name="blockchain_state_progress_hours">Blockkedjan %1$s, %2$d timmar efter</string>
 	<string name="blockchain_state_progress_days">Blockkedjan %1$s, %2$d dagar efter</string>
 	<string name="blockchain_state_progress_weeks">Blockkedjan %1$s, %2$d veckor efter</string>
@@ -50,9 +50,9 @@
 	<string name="send_coins_sent_msg">Skickat!</string>
 	<string name="send_coins_error_msg">Problem att skicka Quarks!</string>
 	<string name="send_coins_address_context_clear_title">Ange ny adress</string>
+
 	<string name="request_coins_activity_title">Ta emot Quarks</string>
-	<string name="request_coins_fragment_address_label">Adress att begära till</string>
-	<string name="request_coins_fragment_include_address_label">inkluderar etiketten med adressen</string>
+
 	<string name="request_coins_fragment_amount_label">Begärt belopp (frivilligt)</string>
 	<string name="request_coins_fragment_initiate_request_qr">Den som skickar dig Quarks ska scanna denna kod.</string>
 	<string name="request_coins_fragment_initiate_request_nfc">Eller skicka med en telefon som har NFC.</string>
@@ -90,7 +90,6 @@
 	<string name="about_credits_market_publisher_title">Andra appar från utvecklaren</string>
 	<string name="notification_coins_received_msg">Tagit emot %s</string>
 	<string name="notification_peers_connected_msg">Ansluten till %d noder</string>
-
 	<!-- generic buttons -->
 	<string name="button_dismiss">Avsluta</string>
 	<string name="button_cancel">Avbryt</string>
@@ -109,5 +108,5 @@
 	<string name="button_settings">Inställningar</string>
 	<string name="time_today">idag</string>
 	<string name="address_unlabeled">(saknar etikett)</string>
-
+    <string name="wallet_options_disconnect">Koppla från</string>
 </resources>

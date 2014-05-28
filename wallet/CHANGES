@@ -55,6 +55,34 @@ v0.1.0
 
 digitalcoin Wallet
 -----------------
+v0.1.5-beta
+* update to bitcoin-wallet 3.46
+* added Litecoin's PeerDBDiscovery System
+* added IRC bootstrap for more peers
+* Send Coins shows the transaction fee (currently the minimum fee)
+
+v0.1.4-beta
+* permanent fix for bugs relating to pause activities (removed temp fixes and support-v4r13)
+
+v0.1.3-beta
+* fixed several bugs relating to pausing activities
+
+v0.1.2-beta
+* fixed checkpoints to work for the Version 1.0 blocks (between 476280 and 523800)
+* added two nodes from a list of addnodes from the bitcointalk topic
+
+v0.1.1-beta
+* renamed to hashengineering.digitalcoin.wallet
+* added support for importing Bitcoin Private Keys from first digitalcoin app (Crypto-Expert)
+
+v1.0.1.5
+* Fixed menu item doubling on rotate in address screen - langerhans (https://github.com/langerhans/dogecoin-wallet-new)
+* replaced block explorer with blockr.io instead of the apparently dead dgc.cryptocoinexplorer.com
+* Added BTER as a backup for getting exchange rates
+* added mBTC as an exchange rate.
+* added Disconnect feature back in
+* updated to bitcoin-wallet v3.39
+
 v1.0.1.4
 * Updated to v3.31 (bitcoin-wallet)
 * Few bug fixes (import parser)
@@ -77,6 +105,68 @@ v1.00
 
 Bitcoin Wallet
 -------------------
+v3.46
+
+* New translation into Slovenian.
+* Update Hebrew translation.
+* Fix missing transactions due to once dusty outputs which are standard as of Bitcoin Core 0.9.
+* Preparation for fetching payment requests via Bluetooth.
+* Based on bitcoinj 0.11.2.
+
+v3.44-v3.45
+
+* Due to the OpenSSL "Heartbleed" vulnerability, removed all HTTPS network access on Android 4.1.1.
+  This means exchange rates will not be available, and the payment protocol cannot fetch
+  signature and cannot pay directly via HTTPS. The chances of an actual exploitability on
+  Android are very slim, but we want to stay on the safe side until things are clearer.
+  Also see http://heartbleed.com/
+
+v3.41-v3.43
+
+* Small bugfixes.
+
+v3.40
+
+* Support for µBTC denomination, for people who are used to low valued currencies.
+* Always use BIP70 when sending payments directly via Bluetooth.
+* Small bugfixes.
+
+v3.39
+
+* Usage of BIP70 when initiating payments via NFC (tap-to-pay) is now a supported feature.
+* New translation into Arabic.
+
+v3.38
+
+* Supports BIP70 payment protocol for in-app payments.
+* Accepting direct payments via Bluetooth is now a supported feature.
+
+v3.37
+
+* New translation into Japanese.
+
+v3.36
+
+* Small bugfix.
+
+v3.35
+
+* Protect wallet against dust spam.
+* Fixed some bugs in the payment protocol.
+* Based on bitcoinj 0.11.1.
+
+v3.34
+
+* Small bugfix.
+
+v3.33
+
+* Small bugfixes.
+
+v3.32
+
+* Support for BIP72 URI extension for payment protocol.
+
 v3.31
 
 * Default denomination has changed to millibitcoin (mBTC).

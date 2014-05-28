@@ -69,8 +69,6 @@
 	<string name="send_coins_options_empty">Dompet kosong</string>
 	<string name="send_coins_address_context_clear_title">Masukkan alamat baru</string>
 	<string name="request_coins_activity_title">Meminta Quark</string>
-	<string name="request_coins_fragment_address_label">Alamat untuk diminta ke</string>
-	<string name="request_coins_fragment_include_address_label">masukkan label dgn alamat</string>
 	<string name="request_coins_fragment_amount_label">Jumlah permintaan (pilihan)</string>
 	<string name="request_coins_fragment_initiate_request_qr">Berikan kode untuk dipindai oleh pengirim.</string>
 	<string name="request_coins_fragment_initiate_request_nfc">Atau tempelkan pada ponsel dgn NFC</string>
@@ -177,7 +175,6 @@
 	<string name="about_credits_market_publisher_title">Apl lain oleh Pembuat</string>
 	<string name="notification_coins_received_msg">Diterima %s</string>
 	<string name="notification_peers_connected_msg">%d peer terhubung</string>
-
 	<!-- generic buttons -->
 	<string name="button_ok">IYA</string>
 	<string name="button_dismiss">Tolak</string>
@@ -197,5 +194,5 @@
 	<string name="button_settings">Pengaturan</string>
 	<string name="time_today">hari ini</string>
 	<string name="address_unlabeled">(tak berlabel)</string>
-
+    <string name="wallet_options_disconnect">Putuskan</string>
 </resources>

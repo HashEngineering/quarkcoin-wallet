@@ -15,7 +15,7 @@ You can find more about Quark at
 http://www.qrk.cc/
 
 If you want to contribute to Quark Wallet, the project is located at
-https://github.com/HashEngineering/Quark-wallet
+https://github.com/HashEngineering/quarkcoin-wallet
 
 License: GPLv3
 Use at your own risk!

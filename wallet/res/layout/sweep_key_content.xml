@@ -9,7 +9,7 @@
 
     <fragment
         android:id="@+id/sweep_key_fragment"
-        android:name="de.langerhans.wallet.ui.SweepKeyFragment"
+        android:name="de.schildbach.wallet.ui.SweepKeyFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout="@layout/sweep_coins_fragment"/>
