@@ -16,10 +16,11 @@ import android.widget.FrameLayout;
 import hashengineering.quarkcoin.wallet.R;
 
 import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnErrorListener;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.widget.VideoView;
 
-public class SplashVideo extends Activity implements OnCompletionListener, MediaPlayer.OnPreparedListener
+public class SplashVideo extends Activity implements OnCompletionListener, OnErrorListener, MediaPlayer.OnPreparedListener
 {
 
     @Override
@@ -27,12 +28,13 @@ public class SplashVideo extends Activity implements OnCompletionListener, Media
     {
         super.onCreate(savedInstanceState);
         //if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.GINGERBREAD)
-        {
+        /*{
             requestWindowFeature(Window.FEATURE_NO_TITLE);
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        }
+        }*/
         setContentView(R.layout.video_splash);
+        getWindow().setBackgroundDrawableResource(R.color.abs__background_holo_dark);
         //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         Display display = getWindowManager().getDefaultDisplay();
         int height = display.getHeight();
@@ -62,16 +64,25 @@ public class SplashVideo extends Activity implements OnCompletionListener, Media
         video.setMinimumWidth(width);
         video.setMinimumHeight(height);
         video.setBackgroundColor(Color.BLACK);
-        video.start();
+        video.setOnErrorListener(this);
+
         video.setOnCompletionListener(this);
         video.setOnPreparedListener(this);
+        video.start();
     }
+    @Override
+    public boolean onError(MediaPlayer mp, int what, int extra) {
+        Intent intent = new Intent(this, SplashScreen.class);
+        startActivity(intent);
+        finish();
+        return true;
+    }
+
 
     @Override
     public void onCompletion(MediaPlayer mp)
     {
         Intent intent = new Intent(this, WalletActivity.class);
-        //intent.putExtra("originalOrientation", orientationAtStart+100);
         startActivity(intent);
         finish();
     }

@@ -503,8 +503,8 @@ public class ExchangeRatesProvider extends ContentProvider
                 }
                 else
                 {
-                    rates.put(CoinDefinition.cryptsyMarketCurrency, new ExchangeRate(CoinDefinition.cryptsyMarketCurrency, GenericUtils.toNanoCoins(String.format("%.8f", btcRate).replace(",", "."), 0), cryptsyValue ? "pubapi.cryptsy.com" : "data.bter.com"));
-                    rates.put("m" + CoinDefinition.cryptsyMarketCurrency, new ExchangeRate("m" + CoinDefinition.cryptsyMarketCurrency, GenericUtils.toNanoCoins(String.format("%.5f", btcRate*1000).replace(",", "."), 0), cryptsyValue ? "pubapi.cryptsy.com" : "data.bter.com"));
+                    rates.put(CoinDefinition.cryptsyMarketCurrency, new ExchangeRate(CoinDefinition.cryptsyMarketCurrency, GenericUtils.toNanoCoins_BTC(String.format("%.8f", btcRate).replace(",", "."), 0), cryptsyValue ? "pubapi.cryptsy.com" : "data.bter.com"));
+                    rates.put("m" + CoinDefinition.cryptsyMarketCurrency, new ExchangeRate("m" + CoinDefinition.cryptsyMarketCurrency, GenericUtils.toNanoCoins_BTC(String.format("%.5f", btcRate*1000).replace(",", "."), 0), cryptsyValue ? "pubapi.cryptsy.com" : "data.bter.com"));
                 }
 
 
