@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Display;
+import android.view.Surface;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
@@ -40,17 +41,20 @@ public class SplashVideo extends Activity implements OnCompletionListener, OnErr
         int height = display.getHeight();
         int width = display.getWidth();
         int r = display.getRotation();
+        int o = display.getOrientation();
 
         int videofile = 0;
-        int land = R.raw.all_2_landscape;
-        int port = R.raw.all_2_portrait;
+        int land = R.raw.splashvideo_horz;//all_2_landscape;
+        int port = R.raw.splashvideo_vert;//all_2_portrait;
         if(height > width)
         {
-            videofile = (r == 1 || r == 3) ? R.raw.all_2_landscape : R.raw.all_2_portrait;
+            //videofile = (r == 1 || r == 3) ? R.raw.all_2_landscape : R.raw.all_2_portrait;
+            videofile = port;//(r == Surface.ROTATION_90 || r == Surface.ROTATION_270) ? land : port;
         }
         else
         {
-            videofile = (r == 0 || r == 2) ? R.raw.all_2_portrait : R.raw.all_2_landscape;
+            //videofile = (r == 0 || r == 2) ? R.raw.all_2_portrait : R.raw.all_2_landscape;
+            videofile = land;//(r == Surface.ROTATION_0 || r == Surface.ROTATION_180) ? land : port;
         }
 
 
@@ -63,7 +67,7 @@ public class SplashVideo extends Activity implements OnCompletionListener, OnErr
 
         video.setMinimumWidth(width);
         video.setMinimumHeight(height);
-        video.setBackgroundColor(Color.BLACK);
+        //video.setBackgroundColor(Color.WHITE);
         video.setOnErrorListener(this);
 
         video.setOnCompletionListener(this);

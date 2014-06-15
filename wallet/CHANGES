@@ -1,4 +1,21 @@
 Quark Wallet
+v0.1.17
+* replaced DOGE references with QRK.
+
+v0.1.16
+* Fixed white bars on video splash
+* Fixed Exchange rates
+* Added default splash screen if videos fail
+* updated checkpoints
+
+v0.1.15
+* fixed landscape video splash
+
+v0.1.14
+* Added Sweep from Dogecoin
+* upgraded to bitcoin wallet 3.46
+* Splash Video Test
+
 v0.1.12
 * updated checkpoints
 * Splash screen is not landscape by default.
