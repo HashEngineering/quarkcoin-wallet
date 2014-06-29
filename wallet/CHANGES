@@ -1,4 +1,7 @@
 Quark Wallet
+v0.2.0
+* updated checkpoints
+* removed "beta" status
 
 v0.1.17
 * replaced DOGE references with QRK.
