@@ -10,7 +10,7 @@ Thumbs.db
 production/
 lib/
 out/
-.bak
+*.bak
 gen-external-apklibs
 gen/
 .DS_Store
