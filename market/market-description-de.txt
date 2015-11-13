@@ -1,4 +1,4 @@
-Hab deine Quarks immer dabei, in deiner Hosentasche! Du zahlst, indem du rasch einen QR-Code scannst. Als Händler empfängst du Zahlungen zuverlässig und sofort. Quark Wallet ist die erste mobile Quark app, und wohl auch die sicherste!
+﻿Hab deine Quarks immer dabei, in deiner Hosentasche! Du zahlst, indem du rasch einen QR-Code scannst. Als Händler empfängst du Zahlungen zuverlässig und sofort. Quark Wallet ist die erste mobile Quark app, und wohl auch die sicherste!
 
 FEATURES:
 
@@ -16,7 +16,7 @@ Weitere Informationen zu Quark findest Du unter
 http://www.qrk.cc/
 
 Wenn Du zu Quark Wallet beitragen willst, das Projekt befindet sich auf
-https://github.com/HashEngineering/Quark-wallet
+https://github.com/HashEngineering/quarkcoin-wallet
 
 Lizenz: GPLv3
 Nutzung auf eigene Gefahr!
