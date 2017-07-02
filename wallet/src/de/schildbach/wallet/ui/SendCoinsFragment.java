@@ -1341,7 +1341,8 @@ public final class SendCoinsFragment extends SherlockFragment
 			{
 				if (state == State.INPUT)
 				{
-					amountCalculatorLink.setBtcAmount(paymentIntent.getAmount());
+					if(paymentIntent.getAmount() != null)
+						amountCalculatorLink.setBtcAmount(paymentIntent.getAmount());
 
 					if (paymentIntent.isBluetoothPaymentUrl())
 						directPaymentEnableView.setChecked(bluetoothAdapter != null && bluetoothAdapter.isEnabled());
